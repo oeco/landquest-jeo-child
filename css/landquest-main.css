@@ -342,6 +342,26 @@ h6 {
 #masthead #masthead-nav #searchform ::-ms-input-placeholder {
   color: #f0f0f0;
 }
+#masthead #lang-nav {
+  position: relative;
+  top: 25px;
+}
+#masthead #lang-nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: table;
+}
+#masthead #lang-nav ul > li {
+  padding-top: 4px;
+  display: table-cell;
+  width: 1%;
+  text-align: center;
+  position: relative;
+}
+#masthead #lang-nav ul > li.selected {
+  border-top: solid;
+}
 .home .mapgroup-container,
 .single-map .mapgroup-container,
 .single-map-group .mapgroup-container,

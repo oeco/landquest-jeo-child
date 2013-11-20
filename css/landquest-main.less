@@ -359,6 +359,26 @@ h3,h4,h5,h6 {
 			.placeholder(#f0f0f0);
 		}
 	}
+	#lang-nav {
+		position:relative;
+		top: 25px;
+	  ul {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			display: table;
+			> li {
+				padding-top: 4px;
+				display: table-cell;
+				width: 1%;
+				text-align: center;
+				position: relative;
+				&.selected {
+					border-top: solid;
+				}
+			}
+		}
+	}
 }
 
 .home,

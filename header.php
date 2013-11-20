@@ -51,13 +51,12 @@
 					<img width="245" height="100" src='<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png'>
 				</div>
 			</div>			
-			<div class="four columns">
-				<nav>
+			<div class="offset-by-two two columns">
+				<nav id="lang-nav">
 					<ul>
-						english
-					</ul>
-					<ul>
-						español
+						<li class='selected'>english</li>
+						<li>::</li>						
+						<li>español</li>
 					</ul>							
 				</nav>
 				<div id="masthead-nav">
