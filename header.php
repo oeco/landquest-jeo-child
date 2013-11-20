@@ -27,26 +27,28 @@
 	<header id="masthead">
 		<div class="container">
 			<div class="four columns">
-				<div id="nav-bar">
-					<span>
-							Authors
-					</span>
-					<span>
-							Partners
-					</span>
-					<span>
-							Contacts
-					</span>
+				<div id="masthead-nav">
+					<nav>
+						<ul>
+							<li>
+								<span class='lsf'>&#xE051;</span>
+								about
+							</li>
+							<li>
+								<span class='lsf'>&#xE055;</span>
+								data and resources
+							</li>
+							<li>
+								<span class='lsf'>&#xE08a;</span>
+								contact
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 			<div class="four columns">
 				<div class="site-meta">
-					<h1>
-						<a href="<?php echo home_url('/'); ?>" title="<?php bloginfo('name'); ?>">
-							<?php bloginfo('name'); ?>
-						</a>
-					</h1>
-					<h2><?php bloginfo('description'); ?></h2>
+					<img width="245" height="100" src='<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png'>
 				</div>
 			</div>			
 			<div class="four columns">
