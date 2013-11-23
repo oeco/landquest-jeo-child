@@ -50,22 +50,27 @@
 				<div class="site-meta">
 					<img width="245" height="100" src='<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png'>
 				</div>
-			</div>			
+			</div>
 			<div class="offset-by-two two columns">
-				<nav id="lang-nav">
-					<ul>
-						<li class='selected'>english</li>
-						<li>::</li>						
-						<li>español</li>
-					</ul>							
-				</nav>
-				<div id="masthead-nav">
-					<div class="clearfix">
-						<nav id="main-nav">
-							<?php wp_nav_menu(array('theme_location' => 'header_menu')); ?>
-						</nav>
-						<?php get_search_form(); ?>
-					</div>
+				<?php if(function_exists('qtrans_getLanguage')) : ?>
+					<nav id="lang-nav">
+						<ul>
+							<?php
+							global $q_config;
+							if(is_404()) $url = get_option('home'); else $url = '';
+							$current = qtrans_getLanguage();
+							foreach($q_config['enabled_languages'] as $language) {
+								$attrs = '';
+								if($language == $current)
+									$attrs = 'class="active"';
+								echo '<li><a href="' . qtrans_convertURL($url, $language) . '" ' . $attrs . '>' . $q_config['language_name'][$language] . '</a></li>';
+							}
+							?>
+						</ul>
+					</nav>
+				<?php endif; ?>
+				<div class="clearfix">
+					<?php get_search_form(); ?>
 				</div>
 			</div>
 		</div>
