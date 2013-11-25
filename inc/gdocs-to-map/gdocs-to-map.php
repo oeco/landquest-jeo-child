@@ -26,7 +26,8 @@ class LandQuest_GDocsToMap {
 		wp_enqueue_style('landquest-gdocs-to-map', get_stylesheet_directory_uri() . '/inc/gdocs-to-map/gdocs-to-map.css');
 		wp_enqueue_script('landquest-gdocs-to-map', get_stylesheet_directory_uri() . '/inc/gdocs-to-map/gdocs-to-map.js', array('jeo', 'underscore'), '0.1.0');
 		wp_localize_script('landquest-gdocs-to-map', 'landquest', array(
-			'data' => $this->get_data()
+			'data' => $this->get_data(),
+			'base_url' => get_stylesheet_directory_uri()
 		));
 
 	}
@@ -56,6 +57,9 @@ class LandQuest_GDocsToMap {
 		$data = array();
 
 		foreach($sources as $key => $csv) {
+
+			// uncomment this if you need to fetch from google docs every time
+			// delete_transient($key);
 
 			// fetch transient data
 			$data[$key] = get_transient($key);
