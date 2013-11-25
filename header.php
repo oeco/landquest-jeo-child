@@ -25,6 +25,7 @@
 </head>
 <body <?php body_class(get_bloginfo('language')); ?>>
 	<header id="masthead">
+		<div class="gradient"></div>
 		<div class="container">
 			<div class="four columns">
 				<div id="masthead-nav">
@@ -49,11 +50,11 @@
 			<div class="four columns">
 				<div class="site-meta">
 					<h1>
-						<a href="<?php echo home_url('/'); ?>"><?php bloginfo('title'); ?><img width="245" height="100" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" /></a>
+						<a href="<?php echo home_url('/'); ?>"><?php bloginfo('title'); ?><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" /></a>
 					</h1>
 				</div>
 			</div>
-			<div class="offset-by-two two columns">
+			<div class="offset-by-one three columns">
 				<?php if(function_exists('qtrans_getLanguage')) : ?>
 					<nav id="lang-nav">
 						<ul>
