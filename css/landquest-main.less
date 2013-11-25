@@ -91,7 +91,7 @@ a {
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+	font-family: "Galdeano", "Helvetica", "Arial", sans-serif;
 }
 
 h1,h2 {
@@ -695,11 +695,30 @@ html#map-embed {
 			.box-shadow(0 2px 3px rgba(0,0,0,0.2));
 			.border-radius(5px);
 			position: relative;
+			.post-thumbnail {
+				position: relative;
+				img {
+					display: block;
+					margin: 0;
+					padding: 0;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					height: 10px;
+					background: url(../img/orn1e.png);
+					pointer-events: none;
+				}
+			}
 			.post-header {
 				padding: 20px 20px 0;
 				h3 {
-					font-size: 18px;
-					line-height: 22px;
+					font-size: 28px;
+					line-height: 36px;
+					text-align: center;
 					font-weight: 800;
 					a {
 						text-decoration: none;

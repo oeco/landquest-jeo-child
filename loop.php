@@ -5,13 +5,13 @@
 				<?php while(have_posts()) : the_post(); ?>
 					<li id="post-<?php the_ID(); ?>" <?php post_class('four columns'); ?>>
 						<article id="post-<?php the_ID(); ?>">
-							<section class="post-thumbnail">
-							 <?php if ( has_post_thumbnail()) : ?>
-							   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-							   <?php the_post_thumbnail('front-loop', array('class' => 'scale-with-grid')); ?>
-							   </a>
-							 <?php endif; ?>
-							</section>
+							<?php if ( has_post_thumbnail()) : ?>
+								<section class="post-thumbnail">
+								   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+								   <?php the_post_thumbnail('front-loop', array('class' => 'scale-with-grid')); ?>
+								   </a>
+								</section>
+							<?php endif; ?>
 							<header class="post-header">
 								<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 								<p class="meta">
