@@ -24,7 +24,6 @@
 								</div>
 							</section>
 							<aside class="actions clearfix">
-								<?php echo jeo_find_post_on_map_button(); ?>
 								<a href="<?php the_permalink(); ?>"><?php _e('Read more', 'jeo'); ?></a>
 							</aside>
 						</article>

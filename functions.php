@@ -26,6 +26,17 @@ function landquest_scripts() {
 }
 add_action('wp_enqueue_scripts', 'landquest_scripts');
 
+function landquest_marker_scripts() {
+
+	// landquest site script
+	wp_enqueue_script('landquest', get_stylesheet_directory_uri() . '/js/landquest.js', array('jquery', 'jeo.markers'), '0.1.0');
+	wp_localize_script('landquest', 'landquest_site', array(
+		'is_single' => is_single()
+	));
+
+}
+add_action('jeo_markers_enqueue_scripts', 'landquest_marker_scripts');
+
 include_once(STYLESHEETPATH . '/inc/gdocs-to-map/gdocs-to-map.php');
 
 ?>

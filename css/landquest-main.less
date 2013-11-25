@@ -83,7 +83,7 @@ html,body {
 	font: 14px/18px "Open Sans", "Helvetica", "Arial", sans-serif;
 	.font-smoothing(antialiased);
 	text-rendering: optimizeLegibility;
-	background: #eeeee7;
+	background: #fff;
 }
 
 a {
@@ -411,6 +411,26 @@ h3,h4,h5,h6 {
 				top: 125px;
 			}
 		}
+		.leaflet-popup {
+			.leaflet-popup-content-wrapper {
+				background: #eee1ce;
+				border: 1px solid #4c3d20;
+				.border-radius(0);
+			}
+			.leaflet-popup-tip-container {
+				z-index: 2;
+				overflow: visible;
+				pointer-events: none;
+				.leaflet-popup-tip {
+					width: 5px;
+					height: 5px;
+					background: #eee1ce;
+					border-right: 1px solid #4c3d20;
+					border-bottom: 1px solid #4c3d20;
+					margin-top: -4px;
+				}
+			}
+		}
 		.map-legend {
 			.map-details-link {
 				display: block;
@@ -476,45 +496,6 @@ h3,h4,h5,h6 {
 				line-height: 14px;
 				.border-radius(2px);
 			}
-		}
-	}
-	.highlight-point {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 200px;
-		height: 200px;
-		margin-top: -2020px;
-		margin-left: -2000px;
-		.border-radius(2000px);
-		border: 1900px solid rgba(0,0,0,0.6);
-		pointer-events: all;
-		z-index: 3;
-		&.animate {
-			-webkit-animation-duration: 1s;
-			-webkit-animation-timing-function: ease;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-name: map-point-highlight;
-			-webkit-animation-delay: .5s;
-			-webkit-animation-fill-mode: forwards;
-		}
-	}
-	.disable-point {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background:rgba(0,0,0,0.8);
-		text-align: center;
-		padding-top: 100px;
-		span {
-			font-size: 20px;
-			line-height: 20px;
-			color: #111;
-			font-weight: 800;
-			background: #f6f6f6;
-			padding: 3px 6px;
 		}
 	}
 	.streetview {
@@ -691,9 +672,7 @@ html#map-embed {
 			margin-bottom: 20px;
 		}
 		article {
-			background: rgba(255,255,255,.9);
-			.box-shadow(0 2px 3px rgba(0,0,0,0.2));
-			.border-radius(5px);
+			.box-shadow(0 0px 3px rgba(0,0,0,0.2));
 			position: relative;
 			.post-thumbnail {
 				position: relative;
@@ -719,78 +698,54 @@ html#map-embed {
 					font-size: 28px;
 					line-height: 36px;
 					text-align: center;
-					font-weight: 800;
+					font-weight: 200;
+					margin-bottom: 20px;
 					a {
+						color: #4b3c1f;
 						text-decoration: none;
 					}
 				}
 				p.meta {
-					font-size: 10px;
-					line-height: 14px;
-					margin: 0 0 10px;
-					color: #999;
+					font-size: 12px;
+					line-height: 12px;
+					height: 6px;
+					margin: 0 0 32px;
+					border-bottom: 1px solid #ddc390;
+					color: #f0ba5a;
+					text-align: center;
 					span {
-						display: block;
+						background: #fff;
+						padding: 0 10px;
 					}
 				}
 			}
 			.post-content {
 				padding: 0 20px 20px;
-				h3 {
-					font-size: 18px;
-					line-height: 22px;
-					font-weight: 800;
-					a {
-						text-decoration: none;
-					}
-				}
 				.post-excerpt {
 					max-height: 108px;
 					overflow: hidden;
 					p {
-						font-size: 12px;
-						line-height: 18px;
+						font-size: 14px;
+						line-height: 20px;
 					}
 				}
 			}
 			.actions {
-				padding: 0 20px 15px;
-				.gradient(@maincolor, darken(@maincolor, 5%), @maincolor);
-				.border-radius(0 0 5px 5px);
-				form {
-					display: inline;
-					margin: 0;
-				}
-				a,
-				button,
-				.button,
-				input[type=submit] {
-					text-transform: uppercase;
-					font-weight: 800;
-					color: rgba(255,255,255,0.5);
+				height: 14px;
+				line-height: 14px;
+				padding: 0;
+				background: url(../img/orn2a.png);
+				text-align: center;
+				a {
+					background: #fff;
+					color: #f1bb59;
+					font-size: 11px;
+					padding: 0 10px 5px 10px;
+					text-transform: lowercase;
 					text-decoration: none;
-					font-size: 10px;
-					line-height: 20px;
-					display: block;
-					float: left;
-					padding: 0;
-					margin: 10px 10px -5px 0;
-					text-shadow: -1px -1px 0px rgba(0,0,0,0.1);
-					.transition(color .2s ease-in-out);
-					font-family: "Open Sans", sans-serif;
-					background: transparent;
-					border: 0;
-					overflow: visible;
-				}
-				&:hover {
-					a,
-					button,
-					.button,
-					input[type=submit] {
-						color: rgba(255,255,255,0.7);
-						&:hover {
-							color: rgba(255,255,255,0.9);
-						}
+					&:after,
+					&:before {
+						content: ' :: ';
 					}
 				}
 			}
@@ -860,9 +815,10 @@ html#map-embed {
 						font-weight: 800;
 						margin: 0 0 20px;
 						a {
+							color: #4b3c1f;
 							text-decoration: none;
 							&:hover {
-								color: darken(@maincolor, 20%);
+								color: lighten(#4b3c1f, 20%);
 							}
 						}
 					}
