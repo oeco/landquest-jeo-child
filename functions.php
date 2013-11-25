@@ -10,6 +10,8 @@ add_action('after_setup_theme', 'landquest_setup');
 
 function landquest_scripts() {
 	
+	define('WP_DEBUG', true);
+	
 	// remove jeo site scripts
 	wp_deregister_script('jeo-site');
 	wp_deregister_style('jeo-main');
@@ -23,4 +25,7 @@ function landquest_scripts() {
 	
 }
 add_action('wp_enqueue_scripts', 'landquest_scripts');
+
+include_once(STYLESHEETPATH . '/inc/gdocs-to-map/gdocs-to-map.php');
+
 ?>

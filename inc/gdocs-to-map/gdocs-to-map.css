@@ -1,0 +1,245 @@
+.rhino-crisis-filter .layer-filter {
+	display: block;
+	clear: both;
+	height: 25px;
+	line-height: 25px;
+	margin-bottom: 10px;
+	text-align: left;
+	opacity: .6;
+	cursor: pointer;
+}
+
+.rhino-crisis-filter .layer-filter label {
+	cursor: pointer;
+	display: block;
+	font-size: 10px;
+	line-height: 16px;
+	font-family: "Share Regular";
+	text-shadow: 0px 0px 3px rgba(255,255,255,0.6);
+	float: left;
+	text-align: center;
+	letter-spacing: -1px;
+}
+
+.rhino-crisis-filter .layer-filter:hover,
+.rhino-crisis-filter .layer-filter.active {
+	opacity: 1;
+}
+
+
+.rhino-crisis-filter .layer-filter .icon {
+	width: 40px;
+	height: 25px;
+	/*-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;*/
+	float: left;
+	margin: 0 20px;
+	/*background: #fff;*/
+	position: relative;
+	overflow: hidden;
+}
+
+.rhino-crisis-filter input[type=radio] {
+	display: none;
+}
+
+.rhino-crisis-filter select {
+	margin: 0 0 10px;
+}
+
+.rhino-crisis-filter .filter-count {
+margin: 5px 0 20px 10px;
+line-height: 20px;
+text-transform: uppercase;
+color: #999;
+text-align: left;
+font-size: 10px;
+width: 90px;
+float: left;
+font-family: Share Regular;
+}
+
+.rhino-crisis-filter .filter-count .total {
+font-weight: 800;
+color: #fff;
+font-size: 25px;
+display: block;
+float: right;
+margin-left: 10px;
+font-family: "Share Bold";
+text-shadow: 0px 0px 5px rgba(255,255,255,0.6);
+}
+
+.map .rhino-crisis {
+	color: #fff;
+	background: #333;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: -30px;
+	margin-left: -15px;
+	text-align: center;
+	position:relative;
+}
+
+.map .rhino-crisis.rhino_deaths/*,
+.rhino-crisis-filter .layer-filter.rhino_deaths .icon*/ {
+	background: #B90000;
+}
+
+.rhino_deaths.layer-filter.active {
+	background-color:rgba(162,0,0,0.6);
+}
+
+.poaching_arrests.layer-filter.active {
+background-color: rgba(243, 164, 25, 0.6);
+}
+
+.rhino_deaths.layer-filter:hover {
+	background-color:rgba(162,0,0,0.3);
+}
+
+.poaching_arrests.layer-filter:hover {
+background-color: rgba(243, 164, 25, 0.3);
+}
+
+
+.map .rhino-crisis.rhino_deaths:before/*,
+.rhino-crisis-filter .layer-filter.rhino_deaths .icon:before*/ {
+	content: url(../../images/rhinoicon.png);
+	position: absolute;
+	width: 30px;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	opacity: .3;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	font-family: "Share Bold"
+}
+
+.map .rhino-crisis.poaching_arrests:before/*,
+.rhino-crisis-filter .layer-filter.rhino_deaths .icon:before*/ {
+	content: url(../../images/arrestsicon.png);
+	position: absolute;
+	width: 30px;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	opacity: .3;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	font-family: "Share Bold"
+}
+
+.rhino-crisis-filter .layer-filter.rhino_deaths .icon:before {
+	content: url(../../images/rhinoicon.png);
+	position: absolute;
+	width: 40px;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+
+.rhino-crisis-filter .layer-filter.poaching_arrests .icon:before {
+	content: url(../../images/arrestsicon.png);
+	position: absolute;
+	width: 40px;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+
+.rhino-crisis-filter select {
+margin: 0 0 20px 5px;
+padding: 0 10px;
+width: 90px;
+height: 25px;
+border: none;
+border-radius: 6px;
+webkit-border-radius: 6px;
+font-family: "Share Bold";
+appearance: none;
+-appearance: none;
+-moz-appearance: none;
+-webkit-appearance: none;
+text-align: center;
+color: #FFF;
+background: url(../../images/arrowdown.png) no-repeat center right rgba(0,0,0,0.5);
+float: left;
+}
+
+.map .rhino-crisis.poaching_arrests/*,
+.rhino-crisis-filter .layer-filter.poaching_arrests .icon*/ {
+	background: #C57E00;
+}
+
+
+
+.map .rhino-crisis.poaching_arrests .marker-content {
+	color: #FFF;
+}
+
+.map .rhino-crisis .marker-content {
+	position: relative;
+	z-index: 2;
+	color: #fff;
+	font-weight: 800;
+	font-size: 14px;
+	font-family: Share Bold;
+	text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
+}
+
+.map .rhino-crisis:hover .bubble-container {
+	display: block;
+}
+
+.map .rhino-crisis .bubble-container {
+	display: none;
+	position: absolute;
+	bottom: 30px;
+	width: 140px;
+	left: 50%;
+	margin-left: -70px;
+}
+
+.map .rhino-crisis .bubble-container:after {
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #333;
+	bottom: 3px;
+	left: 50%;
+	position: absolute;
+	margin-left: -7px;
+}
+
+.map .rhino-crisis .bubble-container .bubble-content {
+	margin-bottom: 10px;
+	background: #333;
+	color: #f0f0f0;
+	padding: 8px 5px;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 800;
+}
+
+.leaflet-marker-pane > * {
+	position: absolute;
+}
