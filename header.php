@@ -48,7 +48,9 @@
 			</div>
 			<div class="four columns">
 				<div class="site-meta">
-					<img width="245" height="100" src='<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png'>
+					<h1>
+						<a href="<?php echo home_url('/'); ?>"><?php bloginfo('title'); ?><img width="245" height="100" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" /></a>
+					</h1>
 				</div>
 			</div>
 			<div class="offset-by-two two columns">
