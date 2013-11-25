@@ -59,7 +59,7 @@ class LandQuest_GDocsToMap {
 		foreach($sources as $key => $csv) {
 
 			// uncomment this if you need to fetch from google docs every time
-			// delete_transient($key);
+//			delete_transient($key);
 
 			// fetch transient data
 			$data[$key] = get_transient($key);
