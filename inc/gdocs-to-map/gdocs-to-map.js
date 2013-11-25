@@ -19,8 +19,10 @@
       var layerData = data[key];
       layers[key] = L.markerClusterGroup({
         iconCreateFunction: function(cluster) {
-          return new L.DivIcon({ 
-            html: '<div class="'+key+'">' + cluster.getChildCount() + '</div>' 
+          return new L.DivIcon({
+            html: '<span>' + cluster.getChildCount() + '</span>',
+			className: 'landquest-icon ' + key,
+			iconSize: [31,31]
           });
         }
       });
@@ -87,10 +89,19 @@
         iconUrl = baseUrl + '/img/icons/11.png';
         break;
 	  }
-	  
-    return L.marker([parseFloat(m.latitude), parseFloat(m.longitude)], {
-      icon: L.icon({iconUrl: iconUrl})
-    });
+
+		var marker = L.marker([parseFloat(m.latitude), parseFloat(m.longitude)], {
+		  icon: L.icon({iconUrl: iconUrl})
+		});
+		
+		marker._data = m;
+		
+		marker.on('mouseover', function() {
+			console.log(marker._data);
+		});
+		
+		return marker;
+		
 	}
 	
 })(jQuery);
