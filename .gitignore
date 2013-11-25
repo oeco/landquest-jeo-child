@@ -1,1 +1,6 @@
 design/*
+data/*
+
+.buildpath
+.project
+.settings/*
