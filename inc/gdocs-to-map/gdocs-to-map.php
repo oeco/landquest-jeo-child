@@ -23,8 +23,8 @@ class LandQuest_GDocsToMap {
 
 	function scripts() {
 
-		wp_enqueue_style('landquest-gdocs-to-map', get_stylesheet_directory_uri() . '/inc/gdocs-to-map/gdocs-to-map.css');
-		wp_enqueue_script('landquest-gdocs-to-map', get_stylesheet_directory_uri() . '/inc/gdocs-to-map/gdocs-to-map.js', array('jeo', 'underscore'), '0.1.0');
+		wp_enqueue_style('landquest-gdocs-to-map', get_stylesheet_directory_uri() . '/inc/gdocs-to-map/gdocs-to-map.css', array('leaflet-markerclusterer'));
+		wp_enqueue_script('landquest-gdocs-to-map', get_stylesheet_directory_uri() . '/inc/gdocs-to-map/gdocs-to-map.js', array('jeo', 'underscore', 'leaflet-markerclusterer'), '0.1.0');
 		wp_localize_script('landquest-gdocs-to-map', 'landquest', array(
 			'data' => $this->get_data(),
 			'base_url' => get_stylesheet_directory_uri()

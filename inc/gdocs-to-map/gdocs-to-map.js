@@ -17,7 +17,14 @@
     for(var key in data) {
 
       var layerData = data[key];
-      layers[key] = L.featureGroup();
+      layers[key] = L.markerClusterGroup({
+        iconCreateFunction: function(cluster) {
+          return new L.DivIcon({ 
+            html: '<div class="'+key+'">' + cluster.getChildCount() + '</div>' 
+          });
+        }
+      });
+
       layers[key]._data = layerData;
       layers[key]._markers = [];
 
