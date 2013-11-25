@@ -20,6 +20,15 @@ class LandQuest_GDocsToMap {
 		add_action('wp_enqueue_scripts', array($this, 'scripts'));
 
 	}
+	
+	function getLanguage() {
+		
+		$language = qtrans_getLanguage();
+		
+		if (!$language) $language = 'en';
+		
+		return $language;
+	}
 
 	function scripts() {
 
@@ -27,7 +36,8 @@ class LandQuest_GDocsToMap {
 		wp_enqueue_script('landquest-gdocs-to-map', get_stylesheet_directory_uri() . '/inc/gdocs-to-map/gdocs-to-map.js', array('jeo', 'underscore', 'leaflet-markerclusterer'), '0.1.0');
 		wp_localize_script('landquest-gdocs-to-map', 'landquest', array(
 			'data' => $this->get_data(),
-			'base_url' => get_stylesheet_directory_uri()
+			'base_url' => get_stylesheet_directory_uri(),
+			'language' => $this->getLanguage()
 		));
 
 	}

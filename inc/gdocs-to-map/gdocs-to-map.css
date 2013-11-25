@@ -4,7 +4,7 @@
 
 .landquest-icon {
 	width: 31px;
-	line-height: 31px;
+
 	height: 31px;
 	border: 0;
 	position: relative;
@@ -23,9 +23,10 @@
 	background: #333;
 	color: #f0f0f0;
 	position: absolute;
+	padding: 10px;
 	bottom: 40px;
-	width: 31px;
-	left: 0;
+	width: 100px;
+	left: -50px;
 	text-align: center;
 	font-weight: 800;
 }
@@ -39,7 +40,7 @@
 	width: 0;
 	height: 0;
 	bottom: -5px;
-	left: 10px;
+	left: 60px;
 }
 
 .landquest-icon:hover span {

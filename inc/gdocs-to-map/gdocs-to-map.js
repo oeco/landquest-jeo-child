@@ -3,8 +3,55 @@
 	var	map,
 		data = landquest.data,
 		baseUrl = landquest.base_url,
+		language = landquest.language,
 		layers = {},
-		currentLayer;
+		currentLayer,
+		markerClusterTitles = {
+			'flowers': {
+				'en': 'Flowers',
+				'es': 'Flores'
+			},
+			'mow_irrigation': {
+				'en': 'MoW Irrigations',
+				'es': 'MoW Irrigations (Translate)'
+			},
+			'mow_boreholes': {
+				'en': 'MoW Boreholes',
+				'es': 'MoW Boreholes (Translate)'
+			},
+			'oxfam_sand_dams': {
+				'en': 'OXFAM Sand Dams',
+				'es': 'OXFAM Sand Dams (Translate)'
+			},
+			'oxfam_boreholes': {
+				'en': 'OXFAM Boreholes',
+				'es': 'OXFAM Boreholes'
+			},
+			'oxfam_lakes': {
+				'en': 'OXFAM Lakes',
+				'es': 'OXFAM Lakes (Translate)'
+			},
+			'oxfam_rivers': {
+				'en': 'OXFAM Rivers',
+				'es': 'OXFAM Rivers (Translate)'
+			},
+			'oxfam_rock_catchments': {
+				'en': 'OXFAM Rock Catchments',
+				'es': 'OXFAM Rock Catchments (Translate)'
+			},
+			'oxfam_springs': {
+				'en': 'OXFAM Springs',
+				'es': 'OXFAM Springs (Translate)'
+			},
+			'oxfam_wells': {
+				'en': 'OXFAM Wells',
+				'es': 'OXFAM Wells (Translate)'
+			},
+			'oxfam_earthpan': {
+				'en': 'OXFAM Earth Pan',
+				'es': 'OXFAM Earth Pan (Translate)'
+			}
+		};
 	
 	jeo.mapReady(function(m) {
 		
@@ -21,13 +68,16 @@
 			layers[key] = new L.MarkerClusterGroup({
 				iconCreateFunction: function(cluster) {
 					return new L.DivIcon({
-						html: '<span>' + cluster.getChildCount() + '</span>',
+						html: '<span>' + cluster._group._markerClusterTitle + ': '
+									+ cluster.getChildCount() + '</span>',
 						className: 'landquest-icon ' + cluster._group._key,
 						iconSize: [31,31]
 					});
 				}
 			});
 			
+			// set info needed by marker cluster
+			layers[key]._markerClusterTitle = markerClusterTitles[key][language];
 			layers[key]._key = key;
 			
 			/*
@@ -110,5 +160,7 @@
 		return marker;
 		
 	}
+	
+
 	
 })(jQuery);
