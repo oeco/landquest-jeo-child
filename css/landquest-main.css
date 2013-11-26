@@ -285,6 +285,18 @@ h6 {
   float: right;
   width: 100%;
 }
+#masthead #searchform ::-webkit-input-placeholder {
+  color: #e8d8b7;
+}
+#masthead #searchform :-moz-placeholder {
+  color: #e8d8b7;
+}
+#masthead #searchform ::-moz-placeholder {
+  color: #e8d8b7;
+}
+#masthead #searchform ::-ms-input-placeholder {
+  color: #e8d8b7;
+}
 #masthead #searchform input#s {
   background: #ffffff url('../img/search-big.png') no-repeat center right;
   width: 100%;
@@ -301,18 +313,6 @@ h6 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-#masthead #searchform input#s ::-webkit-input-placeholder {
-  color: #e8d8b7;
-}
-#masthead #searchform input#s :-moz-placeholder {
-  color: #e8d8b7;
-}
-#masthead #searchform input#s ::-moz-placeholder {
-  color: #e8d8b7;
-}
-#masthead #searchform input#s ::-ms-input-placeholder {
-  color: #e8d8b7;
 }
 #masthead #lang-nav {
   margin: 30px 0px;
@@ -380,6 +380,24 @@ h6 {
   height: 11px;
   background: url(../img/orn1a.png);
   z-index: 9999;
+  pointer-events: none;
+}
+.map-container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: transparent;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.5)), color-stop(1, transparent));
+  background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+  background: -moz-linear-gradient(center bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  background: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='rgba(0, 0, 0, 0.5)', GradientType=0);
+  z-index: 100;
+  pointer-events: none;
 }
 .map-container .map {
   width: 100%;
@@ -392,6 +410,33 @@ h6 {
 }
 .map-container .map .leaflet-control-container .leaflet-bottom {
   bottom: 10px;
+}
+.map-container .map .leaflet-bar {
+  border-color: #eee1ce;
+  color: #4b3c1f;
+}
+.map-container .map .leaflet-bar a {
+  background-color: #ddc390;
+  color: #4b3c1f;
+}
+.map-container .map .leaflet-control.jeo-geocode {
+  background: #ddc390;
+}
+.map-container .map .leaflet-control.jeo-geocode ::-webkit-input-placeholder {
+  color: #4b3c1f;
+}
+.map-container .map .leaflet-control.jeo-geocode :-moz-placeholder {
+  color: #4b3c1f;
+}
+.map-container .map .leaflet-control.jeo-geocode ::-moz-placeholder {
+  color: #4b3c1f;
+}
+.map-container .map .leaflet-control.jeo-geocode ::-ms-input-placeholder {
+  color: #4b3c1f;
+}
+.map-container .map input {
+  background: #ddc390;
+  border-color: #eec1ce;
 }
 .map-container .map .leaflet-popup .leaflet-popup-content-wrapper {
   background: #eee1ce;

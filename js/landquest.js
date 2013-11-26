@@ -15,12 +15,24 @@ function lockMarkerPopup(map, marker) {
 
 	marker.openPopup();
 	
-	map.on('click', function() {
+	var openPopup = function() {
 		marker.openPopup();
-	});
+	};
 	
-	marker.on('mouseover mouseout', function() {
-		marker.openPopup();
+	map.on('click', openPopup);
+	marker.on('mouseover mouseout', openPopup);
+
+	marker._forcedPopup = true;
+
+	map.on('dragstart', function() {
+
+		if(marker._forcedPopup) {
+			marker._forcedPopup = false;
+			map.off('click', openPopup);
+			marker.off('mouseover mouseout', openPopup);
+			marker.closePopup();
+		}
+
 	});
-	
+
 }

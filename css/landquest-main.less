@@ -325,6 +325,7 @@ h3,h4,h5,h6 {
 		margin: 0;
 		float: right;
 		width: 100%;
+		.placeholder(#e8d8b7);
 		input#s {
 			background: white url('../img/search-big.png') no-repeat center right;
 			width: 100%;
@@ -332,7 +333,6 @@ h3,h4,h5,h6 {
 			border-left: 1px solid #e8d8b7;
 			border-right: 0;
 			border-bottom: 0;
-			.placeholder(#e8d8b7);
 			.border-radius(0);
 			padding: 10px;
 			.box-sizing(border-box);
@@ -402,6 +402,19 @@ h3,h4,h5,h6 {
 		height: 11px;
 		background: url(../img/orn1a.png);
 		z-index: 9999;
+		pointer-events: none;
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 40px;
+		.gradient(transparent, rgba(0,0,0,0.5), transparent);
+		z-index: 100;
+		pointer-events: none;
 	}
 	.map {
 		width: 100%;
@@ -415,6 +428,22 @@ h3,h4,h5,h6 {
 			.leaflet-bottom {
 				bottom: 10px;
 			}
+		}
+		.leaflet-bar {
+			border-color: #eee1ce;
+			color: #4b3c1f;
+			a {
+				background-color: #ddc390;
+				color: #4b3c1f;
+			}
+		}
+		.leaflet-control.jeo-geocode {
+			background: #ddc390;
+			.placeholder(#4b3c1f);
+		}
+		input { 
+			background: #ddc390;
+			border-color: #eec1ce;
 		}
 		.leaflet-popup {
 			.leaflet-popup-content-wrapper {
