@@ -429,7 +429,6 @@ h6 {
   position: relative;
   margin-bottom: 20px;
   margin-top: 20px;
-  pointer-events: auto;
 }
 .map-container .map .map-legends:before {
   content: '';
@@ -455,6 +454,7 @@ h6 {
   max-height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
+  pointer-events: auto;
 }
 .map-container .map .map-legend::-webkit-scrollbar {
   background: #ede0cd;
