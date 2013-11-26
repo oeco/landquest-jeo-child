@@ -375,8 +375,6 @@ h3,h4,h5,h6 {
 .single-map-group {
 	.mapgroup-container,
 	.map-container {
-		min-height: 500px;
-		height: 80%;
 		.streetview,
 		.map {
 			width: 100%;
@@ -388,8 +386,7 @@ h3,h4,h5,h6 {
 .map-container {
 	position: relative;
 	z-index: 5;
-	min-height: 500px;
-	height: 55%;
+	height: 400px;
 	&:after{
 		content: '';
 		display: block;
@@ -408,7 +405,7 @@ h3,h4,h5,h6 {
 		z-index: 2;
 		.leaflet-control-container {
 			.leaflet-top {
-				top: 125px;
+				top: 20px;
 			}
 		}
 		.leaflet-popup {
@@ -722,7 +719,6 @@ html#map-embed {
 			.post-content {
 				padding: 0 20px 20px;
 				.post-excerpt {
-					max-height: 108px;
 					overflow: hidden;
 					p {
 						font-size: 14px;
@@ -943,6 +939,64 @@ html#map-embed {
 		text-align: right;
 		p {
 			margin: 0;
+		}
+	}
+}
+
+.single {
+	.map-container {
+		.map {
+			.leaflet-popup-content {
+				width: auto;
+				max-width: none;
+				margin: 0;
+				margin: 10px;
+				small {
+					display: none;
+				}
+				h4 {
+					font-size: 45px;
+					line-height: 60px;
+					font-weight: 200;
+				}
+			}
+		}
+	}
+}
+
+#content.single-post {
+	margin-top: 40px;
+	font-size: 16px;
+	line-height: 26px;
+	#post-excerpt {
+		font-size: 20px;
+		line-height: 30px;
+		font-weight: 600;
+		margin-bottom: 40px;
+	}
+	#post-meta {
+		background: url(../img/orn1c.png) repeat-x;
+		text-align: center;
+		margin-bottom: 40px;
+		line-height: 10px;
+		font-family: "Galdeano";
+		p {
+			margin: 0 0 10px;
+			padding: 0 10px;
+			font-size: 12px;
+			line-height: 12px;
+			color: #f1b958;
+			span {
+				background: #fff;
+				padding: 0 10px;
+			}
+			&.post-author {
+				font-size: 16px;
+				line-height: 16px;
+				font-weight: 600;
+				margin-top: -5px;
+				color: #3e9082;
+			}
 		}
 	}
 }
