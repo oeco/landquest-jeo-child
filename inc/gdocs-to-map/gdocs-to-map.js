@@ -6,56 +6,92 @@
 		language = landquest.language,
 		layers = {},
 		currentLayer,
-		markerClusterTitles = {
+		layersAdditionalInfo = {
 			'flowers': {
-				'en': 'Flowers',
-				'es': 'Flores'
+				'icon': '/img/icons/1.png',
+				'title': {
+					'en': 'Flowers',
+					'es': 'Flores'
+				}
 			},
 			'mow_irrigation': {
-				'en': 'MoW Irrigations',
-				'es': 'MoW Irrigations (Translate)'
+				'icon': '/img/icons/2.png',
+				'title': {				
+					'en': 'MoW Irrigations',
+					'es': 'MoW Irrigations (Translate)'
+				}
 			},
 			'mow_boreholes': {
-				'en': 'MoW Boreholes',
-				'es': 'MoW Boreholes (Translate)'
+				'icon': '/img/icons/3.png',
+				'title': {				
+					'en': 'MoW Boreholes',
+					'es': 'MoW Boreholes (Translate)'
+				}
 			},
 			'oxfam_sand_dams': {
-				'en': 'OXFAM Sand Dams',
-				'es': 'OXFAM Sand Dams (Translate)'
+				'icon': '/img/icons/4.png',
+				'title': {				
+					'en': 'OXFAM Sand Dams',
+					'es': 'OXFAM Sand Dams (Translate)'
+				}
 			},
 			'oxfam_boreholes': {
-				'en': 'OXFAM Boreholes',
-				'es': 'OXFAM Boreholes'
+				'icon': '/img/icons/5.png',
+				'title': {				
+					'en': 'OXFAM Boreholes',
+					'es': 'OXFAM Boreholes'
+				}
 			},
 			'oxfam_lakes': {
-				'en': 'OXFAM Lakes',
-				'es': 'OXFAM Lakes (Translate)'
+				'icon': '/img/icons/6.png',
+				'title': {				
+					'en': 'OXFAM Lakes',
+					'es': 'OXFAM Lakes (Translate)'
+				}
 			},
 			'oxfam_rivers': {
-				'en': 'OXFAM Rivers',
-				'es': 'OXFAM Rivers (Translate)'
+				'icon': '/img/icons/7.png',
+				'title': {				
+					'en': 'OXFAM Rivers',
+					'es': 'OXFAM Rivers (Translate)'
+				}
 			},
 			'oxfam_rock_catchments': {
-				'en': 'OXFAM Rock Catchments',
-				'es': 'OXFAM Rock Catchments (Translate)'
+				'icon': '/img/icons/8.png',
+				'title': {				
+					'en': 'OXFAM Rock Catchments',
+					'es': 'OXFAM Rock Catchments (Translate)'
+				}
 			},
 			'oxfam_springs': {
-				'en': 'OXFAM Springs',
-				'es': 'OXFAM Springs (Translate)'
+				'icon': '/img/icons/9.png',
+				'title': {				
+					'en': 'OXFAM Springs',
+					'es': 'OXFAM Springs (Translate)'
+				}
 			},
 			'oxfam_wells': {
-				'en': 'OXFAM Wells',
-				'es': 'OXFAM Wells (Translate)'
+				'icon': '/img/icons/10.png',
+				'title': {				
+					'en': 'OXFAM Wells',
+					'es': 'OXFAM Wells (Translate)'
+				}
 			},
 			'oxfam_earthpan': {
-				'en': 'OXFAM Earth Pan',
-				'es': 'OXFAM Earth Pan (Translate)'
+				'icon': '/img/icons/11.png',
+				'title': {				
+					'en': 'OXFAM Earth Pan',
+					'es': 'OXFAM Earth Pan (Translate)'
+				}
 			}
 		};
 	
 	jeo.mapReady(function(m) {
 		
 		map = m;
+		
+		// div to be used in Map Legend Control
+		legendDiv = "<div class='lq-map-legend'>\n<ul>\n"
 		
 		/*
 		 * Layers
@@ -77,13 +113,9 @@
 			});
 			
 			// set info needed by marker cluster
-			layers[key]._markerClusterTitle = markerClusterTitles[key][language];
+			layers[key]._markerClusterTitle = layersAdditionalInfo[key]['title'][language];
 			layers[key]._key = key;
-			
-			/*
-			layers[key] = new L.FeatureGroup();
-			*/
-			
+						
 			layers[key]._data = layerData;
 			layers[key]._markers = [];
 			
@@ -102,50 +134,24 @@
 				}
 			});
 			
+			// add layer to legend div
+			legendDiv = legendDiv + "<li class='"+ key +" lq-map-legend-item'>\n"
+						+ "<img src='"+baseUrl+layersAdditionalInfo[key]['icon']+"'></img>\n"
+						+ "<span>"+layersAdditionalInfo[key]['title'][language]+"</span>\n";
+			
 			layers[key].addTo(map);
 		}
 		
+		legendDiv = legendDiv + '</div>\n'
+		
+		map.legendControl.addLegend(legendDiv);
+		
 	});
+		
 	
 	function buildMarker(m) {
 		
-		var iconUrl;
-		
-		switch (m.marker_class) {
-			case 'flowers':
-				iconUrl = baseUrl + '/img/icons/1.png';
-				break;
-			case 'mow_irrigation':
-				iconUrl = baseUrl + '/img/icons/2.png';
-				break;  
-			case 'mow_boreholes':
-				iconUrl = baseUrl + '/img/icons/3.png';
-				break;
-			case 'oxfam_sand_dams':
-				iconUrl = baseUrl + '/img/icons/4.png';
-				break;	  
-			case 'oxfam_boreholes':
-				iconUrl = baseUrl + '/img/icons/5.png';
-				break;
-			case 'oxfam_lakes':
-				iconUrl = baseUrl + '/img/icons/6.png';
-				break;	  
-			case 'oxfam_rivers':
-				iconUrl = baseUrl + '/img/icons/7.png';
-				break;
-			case 'oxfam_rock_catchments':
-				iconUrl = baseUrl + '/img/icons/8.png';
-				break;	  
-			case 'oxfam_springs':
-				iconUrl = baseUrl + '/img/icons/9.png';
-				break;	  
-			case 'oxfam_wells':
-				iconUrl = baseUrl + '/img/icons/10.png';
-				break;	  
-			case 'oxfam_earthpan':
-				iconUrl = baseUrl + '/img/icons/11.png';
-				break;
-		}
+		var iconUrl = baseUrl + layersAdditionalInfo[m.marker_class]['icon'];
 		
 		var marker = L.marker([parseFloat(m.latitude), parseFloat(m.longitude)], {
 			icon: L.icon({iconUrl: iconUrl})
@@ -160,7 +166,5 @@
 		return marker;
 		
 	}
-	
-
 	
 })(jQuery);
