@@ -7,7 +7,7 @@
 	<article id="content" class="single-post">
 		<section class="content">
 			<div class="container">
-				<div class="eight columns offset-by-two">
+				<div class="ten columns offset-by-one">
 					<?php if($post->post_excerpt) : ?>
 						<section id="post-excerpt">
 							<?php the_excerpt(); ?>

@@ -1085,6 +1085,7 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
   line-height: 30px;
   font-weight: 600;
   margin-bottom: 40px;
+  text-align: center;
 }
 #content.single-post #post-meta {
   background: url(../img/orn1c.png) repeat-x;
