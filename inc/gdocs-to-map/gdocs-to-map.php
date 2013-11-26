@@ -38,6 +38,29 @@ class LandQuest_GDocsToMap {
 			'data' => $this->get_data(),
 			'base_url' => get_stylesheet_directory_uri(),
 			'language' => $this->getLanguage()
+			// 'layers_info' => array(
+			// 	'flowers' => array(
+			// 			'title' => __('Flowers', 'landquest'),
+			// 			'template' => "<div class='lq-map-legend-item'>" .
+			// 											"<div class='title'>" . __('Flowers', 'landquest') . "</span>" .
+			// 											"<div class='title'>".__('Company', 'landquest').": <%= item.".__('Company', 'landquest')." %></div>".
+			// 									  "</div>"
+			// 	),
+			// 	'mow_irrigation' => array(
+			// 			'title' => __('MoW Irrigation', 'landquest'),
+			// 			'template' => "<div class='lq-map-legend-item'>".
+			// 											"<div class='title'>" . __('Flowers', 'landquest') . "</span>".
+			// 											"<div class='title'>Company: <%= item.Company %></div>".
+			// 									  "</div>"
+			// 	),
+			// 	'mow_boreholes' => array(
+			// 			'title' => __('MoW Boreholes', 'landquest'),
+			// 			'template' => "<div class='lq-map-legend-item'>".
+			// 											"<div class='title'>" . __('Flowers', 'landquest') . "</span>".
+			// 											"<div class='title'>Company: <%= item.Company %></div>".
+			// 									  "</div>"
+			// 	)
+			// )
 		));
 
 	}

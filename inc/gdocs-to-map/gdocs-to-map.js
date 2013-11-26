@@ -13,6 +13,7 @@
 					'en': 'Flowers',
 					'es': 'Flores'
 				}
+				
 			},
 			'mow_irrigation': {
 				'icon': '/img/icons/2.png',
@@ -147,6 +148,14 @@
 		map.legendControl.addLegend(legendDiv);
 		
 	});
+	
+	function popupHtml(item) {
+		layer = item.marker_class;
+		// if(!templateFunctions[layer])
+		// 	templateFunctions[layer] = _.template(layersAdditionalInfo['flowers']['template'][language]);
+		// var template = templateFunctions[layer];
+		return '<div>Popup</div>';//template({item: item});
+    }
 		
 	
 	function buildMarker(m) {
@@ -158,10 +167,24 @@
 		});
 		
 		marker._data = m;
+
+		marker.bindPopup(popupHtml(m));
 		
-		marker.on('mouseover', function() {
-			console.log(marker._data);
+		marker.on('mouseover', function(e) {
+			e.target.previousOffset = e.target.options.zIndexOffset;
+			e.target.setZIndexOffset(1500);
+			e.target.openPopup();
 		});
+		
+		marker.on('mouseout', function(e) {
+			e.target.setZIndexOffset(e.target.previousOffset);
+			e.target.closePopup();
+		});
+		marker.on('click', function(e) {
+			markers.openMarker(e.target, false);
+			return false;
+		});
+		
 		
 		return marker;
 		
