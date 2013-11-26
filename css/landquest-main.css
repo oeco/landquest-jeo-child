@@ -646,25 +646,18 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
 .section-title,
 .single-post-header,
 .page-header {
-  background: #fefefe;
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  -khtml-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  padding: 40px 0 20px;
-  margin: 0 0 20px;
+  padding: 40px 0 0;
   position: relative;
 }
 .section-title h1,
 .single-post-header h1,
-.page-header h1 {
-  color: #333;
-}
+.page-header h1,
 .section-title h2,
 .single-post-header h2,
 .page-header h2 {
-  color: #333;
+  color: #ddc48e;
+  font-family: "Galdeano";
+  font-weight: 200;
 }
 .section-title .post-meta,
 .single-post-header .post-meta,
