@@ -12,13 +12,6 @@ if(is_front_page()) {
 }
 ?>
 
-<div class="section-title">
-	<div class="container">
-		<div class="twelve columns">
-			<h2><?php _e('Investigations', 'jeo'); ?></H2>
-		</div>
-	</div>
-</div>
 <?php get_template_part('loop'); ?>
 
 <?php get_footer(); ?>

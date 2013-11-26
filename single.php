@@ -5,6 +5,13 @@
 	<?php jeo_map(); ?>
 
 	<article id="content" class="single-post">
+		<header id="post-header" class="page-header">
+			<div class="container">
+				<div class="ten columns offset-by-one">
+					<h1><?php the_title(); ?></h1>
+				</div>
+			</div>
+		</header>
 		<section class="content">
 			<div class="container">
 				<div class="ten columns offset-by-one">

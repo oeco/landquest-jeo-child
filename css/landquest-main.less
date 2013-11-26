@@ -147,7 +147,6 @@ h3,h4,h5,h6 {
 	opacity: 1;
 	background: #f4ebda;
 	z-index: 6;
-	.box-shadow(0 0 100px rgba(0,0,0,1));
 	&:before {
 		content: '';
 		display: block;
@@ -367,6 +366,12 @@ h3,h4,h5,h6 {
 				}
 			}
 		}
+	}
+}
+
+.displaying-map {
+	#masthead {
+		.box-shadow(0 0 100px rgba(0,0,0,1));
 	}
 }
 
@@ -992,8 +997,9 @@ html#map-embed {
 .single {
 	.map-container {
 		.map {
+			height: 150%;
 			.leaflet-popup-content {
-				width: auto;
+				width: 620px !important;
 				max-width: none;
 				margin: 0;
 				margin: 10px;
@@ -1004,16 +1010,35 @@ html#map-embed {
 					font-size: 45px;
 					line-height: 60px;
 					font-weight: 200;
+					text-align: center;
 				}
 			}
 		}
 	}
 }
 
+.displaying-map {
+	#content.single-post {
+		margin-top: 40px;
+		#post-header {
+			display: none;
+		}
+	}	
+}
+
+.single.displaying-map {
+	.map-legends {
+		display: none !important;
+	}
+}
+
 #content.single-post {
-	margin-top: 40px;
+	margin: 0;
 	font-size: 16px;
 	line-height: 26px;
+	#post-header {
+		margin-bottom: 40px;
+	}
 	#post-excerpt {
 		font-size: 20px;
 		line-height: 30px;
@@ -1022,7 +1047,7 @@ html#map-embed {
 		text-align: center;
 	}
 	#post-meta {
-		background: url(../img/orn1c.png) repeat-x;
+		background: url(../img/orn1c.png) 0 3px repeat-x;
 		text-align: center;
 		margin-bottom: 40px;
 		line-height: 10px;
@@ -1030,18 +1055,17 @@ html#map-embed {
 		p {
 			margin: 0 0 10px;
 			padding: 0 10px;
-			font-size: 12px;
-			line-height: 12px;
+			font-size: 14px;
+			line-height: 14px;
 			color: #f1b958;
 			span {
 				background: #fff;
 				padding: 0 10px;
 			}
 			&.post-author {
-				font-size: 16px;
-				line-height: 16px;
+				font-size: 18px;
+				line-height: 18px;
 				font-weight: 600;
-				margin-top: -5px;
 				color: #3e9082;
 			}
 		}

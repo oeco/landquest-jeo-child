@@ -81,11 +81,6 @@ h6 {
   opacity: 1;
   background: #f4ebda;
   z-index: 6;
-  -webkit-box-shadow: 0 0 100px #000000;
-  -khtml-box-shadow: 0 0 100px #000000;
-  -moz-box-shadow: 0 0 100px #000000;
-  -o-box-shadow: 0 0 100px #000000;
-  box-shadow: 0 0 100px #000000;
 }
 #masthead:before {
   content: '';
@@ -347,6 +342,13 @@ h6 {
 }
 #masthead #lang-nav ul > li a.active {
   border-top: 1px solid #ddc390;
+}
+.displaying-map #masthead {
+  -webkit-box-shadow: 0 0 100px #000000;
+  -khtml-box-shadow: 0 0 100px #000000;
+  -moz-box-shadow: 0 0 100px #000000;
+  -o-box-shadow: 0 0 100px #000000;
+  box-shadow: 0 0 100px #000000;
 }
 .home .mapgroup-container .streetview,
 .single-map .mapgroup-container .streetview,
@@ -1061,8 +1063,11 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
 #colophon .credits p {
   margin: 0;
 }
+.single .map-container .map {
+  height: 150%;
+}
 .single .map-container .map .leaflet-popup-content {
-  width: auto;
+  width: 620px !important;
   max-width: none;
   margin: 0;
   margin: 10px;
@@ -1074,11 +1079,24 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
   font-size: 45px;
   line-height: 60px;
   font-weight: 200;
+  text-align: center;
+}
+.displaying-map #content.single-post {
+  margin-top: 40px;
+}
+.displaying-map #content.single-post #post-header {
+  display: none;
+}
+.single.displaying-map .map-legends {
+  display: none !important;
 }
 #content.single-post {
-  margin-top: 40px;
+  margin: 0;
   font-size: 16px;
   line-height: 26px;
+}
+#content.single-post #post-header {
+  margin-bottom: 40px;
 }
 #content.single-post #post-excerpt {
   font-size: 20px;
@@ -1088,7 +1106,7 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
   text-align: center;
 }
 #content.single-post #post-meta {
-  background: url(../img/orn1c.png) repeat-x;
+  background: url(../img/orn1c.png) 0 3px repeat-x;
   text-align: center;
   margin-bottom: 40px;
   line-height: 10px;
@@ -1097,8 +1115,8 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
 #content.single-post #post-meta p {
   margin: 0 0 10px;
   padding: 0 10px;
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 14px;
+  line-height: 14px;
   color: #f1b958;
 }
 #content.single-post #post-meta p span {
@@ -1106,10 +1124,9 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
   padding: 0 10px;
 }
 #content.single-post #post-meta p.post-author {
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 18px;
   font-weight: 600;
-  margin-top: -5px;
   color: #3e9082;
 }
 #jeo-share-widget {
