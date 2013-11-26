@@ -38,5 +38,6 @@ function landquest_marker_scripts() {
 add_action('jeo_markers_enqueue_scripts', 'landquest_marker_scripts');
 
 include_once(STYLESHEETPATH . '/inc/gdocs-to-map/gdocs-to-map.php');
+include_once(STYLESHEETPATH . '/inc/jeo-post-zoom.php');
 
 ?>
