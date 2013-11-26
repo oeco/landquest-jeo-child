@@ -47,18 +47,20 @@ class JEO_Post_Zoom {
 	}
 	
 	function wp_footer() {
-		?>
-		<script type="text/javascript">
-			jeo.markersReady(function(map) {
-				if(map._markers.length == 1) {
-					var marker = map._markers[0];
-					if(typeof marker.feature.properties.zoom != 'undefined') {
-						map.setZoom(marker.feature.properties.zoom);
+		if(is_single()) {
+			?>
+			<script type="text/javascript">
+				jeo.markersReady(function(map) {
+					if(map._markers.length === 1) {
+						var marker = map._markers[0];
+						if(typeof marker.feature.properties.zoom != 'undefined') {
+							map.setZoom(marker.feature.properties.zoom);
+						}
 					}
-				}
-			});
-		</script>
-		<?php
+				});
+			</script>
+			<?php
+		}
 	}
 
 }
