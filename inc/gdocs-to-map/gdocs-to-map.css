@@ -101,3 +101,32 @@
 .landquest-icon.oxfam_earthpan:after {
 	background: url(../../img/icons/_11.png);
 }
+
+.lq-map-legend {
+	width: 200px;
+}
+
+.lq-map-legend ul {
+	margin: 0;
+	padding: 0;
+}
+
+.lq-map-legend li {
+	line-height: 21px;
+	border-bottom: 1px solid #ede0cd;
+	padding: 10px 0 10px;
+	margin: 0;
+}
+.lq-map-legend li:first-child {
+	padding-top: 0;
+}
+
+.lq-map-legend li:last-child {
+	border-bottom: 0;
+	padding-botom: 0;
+}
+
+.lq-map-legend li img {
+	float: left;
+	margin: 0 10px 0 0;
+}
