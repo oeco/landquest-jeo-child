@@ -3,7 +3,9 @@
 function landquest_setup() {
 	
 	add_theme_support('post-thumbnails');
-	add_image_size( 'front-loop', 360, 240, true);
+	add_image_size('bubble-thumbnail', 100, 100, true);
+	add_image_size('front-loop', 360, 240, true);
+	add_image_size('small-thumbnail', 260, 173, true);
 	load_child_theme_textdomain('landquest', get_stylesheet_directory() . '/languages');
 
 }
@@ -38,8 +40,34 @@ function landquest_marker_scripts() {
 }
 add_action('jeo_markers_enqueue_scripts', 'landquest_marker_scripts');
 
+/*
+ * ACF
+ */
+
+
+function landquest_acf_dir() {
+        return get_stylesheet_directory_uri() . '/inc/acf/';
+}
+add_filter('acf/helpers/get_dir', 'landquest_acf_dir');
+
+define('ACF_LITE', false);
+require_once(STYLESHEETPATH . '/inc/acf/acf.php');
+
 include_once(STYLESHEETPATH . '/inc/author.php');
+include_once(STYLESHEETPATH . '/inc/partner.php');
 include_once(STYLESHEETPATH . '/inc/gdocs-to-map/gdocs-to-map.php');
 include_once(STYLESHEETPATH . '/inc/jeo-post-zoom.php');
+
+/*
+ * About map
+ */
+
+function landquest_about_marker_query($query) {
+	if(is_page('about'))
+		return new WP_Query(array('post_type' => 'author', 'posts_per_page' => -1));
+	
+	return $query;
+}
+add_filter('jeo_marker_base_query', 'landquest_about_marker_query');
 
 ?>

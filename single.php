@@ -20,14 +20,20 @@
 							<?php the_excerpt(); ?>
 						</section>
 					<?php endif; ?>
-					<aside id="post-meta">
-						<p class="post-author">
-							<span><?php _e('by', 'landquest'); ?> <?php the_author(); ?></span>
-						</p>
-						<p class="post-date">
-							<span><?php the_date(); ?></span>
-						</p>
-					</aside>
+					<?php if(get_post_type() != 'author') :
+						$author = landquest_get_author();
+						?>
+						<aside id="post-meta">
+							<?php if($author) : ?>
+								<p class="post-author">
+									<a href="<?php echo get_permalink($author->ID); ?>"><span><?php _e('by', 'landquest'); ?> <?php echo get_the_title($author->ID); ?></span></a>
+								</p>
+							<?php endif; ?>
+							<p class="post-date">
+								<span><?php the_date(); ?></span>
+							</p>
+						</aside>
+					<?php endif; ?>
 					<?php the_content(); ?>
 				</div>
 			</div>

@@ -1024,7 +1024,14 @@ html#map-embed {
 .single {
 	.map-container {
 		.map {
-			height: 150%;
+			height: 140%;
+		}
+	}
+}
+
+.single-post {
+	.map-container {
+		.map {
 			.leaflet-popup-content {
 				width: 620px !important;
 				max-width: none;
@@ -1044,11 +1051,48 @@ html#map-embed {
 	}
 }
 
+.map-container .map .leaflet-popup-content {
+	max-width: none;
+	.author-bubble {
+		.wp-post-image {
+			float: left;
+			margin: -25px 20px 20px -25px;
+			border: 1px solid #4c3d20;
+			width: 80px;
+			height: 80px;
+		}
+		h4 {
+			font-size: 20px;
+			line-height: 26px;
+			text-align: left;
+		}
+		.meta {
+			margin: 0 0 20px;
+			p {
+				margin: 0;
+				color: #666;
+				font-size: 12px;
+				line-height: 16px;
+				a {
+					color: #666;
+					text-decoration: none;
+					&:hover {
+						color: #333;	
+					}
+				}
+			}
+		}
+	}
+}
+
 .displaying-map {
 	#content.single-post {
 		margin-top: 40px;
 		#post-header {
 			display: none;
+		}
+		#page-header {
+			padding-top: 0;
 		}
 	}	
 }
@@ -1085,6 +1129,10 @@ html#map-embed {
 			font-size: 14px;
 			line-height: 14px;
 			color: #f1b958;
+			a {
+				color: #f1b958;
+				text-decoration: none;
+			}
 			span {
 				background: #fff;
 				padding: 0 10px;
@@ -1094,6 +1142,48 @@ html#map-embed {
 				line-height: 18px;
 				font-weight: 600;
 				color: #3e9082;
+				a {
+					color: #3e9082;
+				}
+			}
+		}
+	}
+}
+
+#content {
+	h3 {
+		color: #ddc48e;
+		font-family: "Galdeano";
+		font-weight: 200;
+		font-size: 40px;
+		line-height: 48px;
+	}
+}
+
+#lq-partners {
+	h3 {
+		margin-bottom: 40px;
+	}
+	a {
+		text-decoration: none;
+	}
+	img {
+		display: block;
+		margin: 0 0 20px;
+	}
+	h4 {
+		font-family: "Galdeano";
+		font-weight: 200;
+		margin: 0;
+		font-size: 26px;
+		line-height: 32px;
+	}
+	p {
+		font-size: 12px;
+		a {
+			color: #666;
+			&:hover {
+				color: #333;
 			}
 		}
 	}
