@@ -4,6 +4,7 @@ function landquest_setup() {
 	
 	add_theme_support('post-thumbnails');
 	add_image_size( 'front-loop', 360, 240, true);
+	load_child_theme_textdomain('landquest', get_stylesheet_directory() . '/languages');
 
 }
 add_action('after_setup_theme', 'landquest_setup');

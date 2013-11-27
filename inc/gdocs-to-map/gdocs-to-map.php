@@ -34,10 +34,59 @@ class LandQuest_GDocsToMap {
 
 		wp_enqueue_style('landquest-gdocs-to-map', get_stylesheet_directory_uri() . '/inc/gdocs-to-map/gdocs-to-map.css', array('leaflet-markerclusterer'));
 		wp_enqueue_script('landquest-gdocs-to-map', get_stylesheet_directory_uri() . '/inc/gdocs-to-map/gdocs-to-map.js', array('jeo', 'underscore', 'leaflet-markerclusterer'), '0.1.0');
+		
+		// Layers info for Leaftet
+		$base_url = get_stylesheet_directory_uri();
 		wp_localize_script('landquest-gdocs-to-map', 'landquest', array(
 			'data' => $this->get_data(),
 			'base_url' => get_stylesheet_directory_uri(),
-			'language' => $this->getLanguage()
+			'language' => $this->getLanguage(),
+			'layersInfo' => array(
+				'flowers' => array(
+						'title' => __('Flowers', 'landquest'),
+						'icon' => $base_url . '/img/icons/1.png'
+				),
+				'mow_irrigation' => array(
+						'title' => __('MoW Irrigation', 'landquest'),
+						'icon' => $base_url . '/img/icons/2.png'
+				),
+				'mow_boreholes' => array(
+						'title' => __('MoW Boreholes', 'landquest'),
+						'icon' => $base_url . '/img/icons/3.png'
+				),
+				'oxfam_sand_dams' => array(
+						'title' => __('OXFAM Sand Dams', 'landquest'),
+						'icon' => $base_url . '/img/icons/4.png'
+				),
+				'oxfam_boreholes' => array(
+						'title' => __('OXFAM Boreholes', 'landquest'),
+						'icon' => $base_url . '/img/icons/5.png'
+				),
+				'oxfam_lakes' => array(
+						'title' => __('OXFAM Lakes', 'landquest'),
+						'icon' => $base_url . '/img/icons/6.png'
+				),
+				'oxfam_rivers' => array(
+						'title' => __('OXFAM Rivers', 'landquest'),
+						'icon' => $base_url . '/img/icons/7.png'
+				),
+				'oxfam_rock_catchments' => array(
+						'title' => __('OXFAM Rock Catchments', 'landquest'),
+						'icon' => $base_url . '/img/icons/8.png'
+				),
+				'oxfam_springs' => array(
+						'title' => __('OXFAM Springs', 'landquest'),
+						'icon' => $base_url . '/img/icons/9.png'
+				),
+				'oxfam_wells' => array(
+						'title' => __('OXFAM Wells', 'landquest'),
+						'icon' => $base_url . '/img/icons/10.png'
+				),
+				'oxfam_earthpan' => array(
+						'title' => __('OXGFAM Earthpan', 'landquest'),
+						'icon' => $base_url . '/img/icons/11.png'
+				)
+			)
 			// 'layers_info' => array(
 			// 	'flowers' => array(
 			// 			'title' => __('Flowers', 'landquest'),
