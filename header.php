@@ -33,15 +33,15 @@
 						<ul>
 							<li>
 								<span class='lsf'>&#xE051;</span>
-								<?php __('about', 'landquest')?>
+								<?php _e('about', 'landquest'); ?>
 							</li>
 							<li>
 								<span class='lsf'>&#xE055;</span>
-								<?php __('data and resources', 'landquest')?>
+								<?php _e('data and resources', 'landquest'); ?>
 							</li>
 							<li>
 								<span class='lsf'>&#xE08a;</span>
-								<?php __('contact', 'landquest')?>
+								<?php _e('contact', 'landquest'); ?>
 							</li>
 						</ul>
 					</nav>
