@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LandQuest\n"
-"POT-Creation-Date: 2013-11-27 16:27-0300\n"
-"PO-Revision-Date: 2013-11-27 16:38-0300\n"
+"POT-Creation-Date: 2013-11-27 17:05-0300\n"
+"PO-Revision-Date: 2013-11-27 17:07-0300\n"
 "Last-Translator: Vitor George <vitor.george@gmail.com>\n"
 "Language-Team: OEcoLab\n"
 "Language: es\n"
@@ -20,6 +20,18 @@ msgctxt "map bubble date format"
 msgid "m/d/Y"
 msgstr "d/m/Y"
 
+#: ../header.php:36
+msgid "about"
+msgstr "sobre"
+
+#: ../header.php:40
+msgid "data and resources"
+msgstr "datos y recursos"
+
+#: ../header.php:44
+msgid "contact"
+msgstr "contacto"
+
 #: ../loop.php:27
 msgid "Read more"
 msgstr "Leer más"
@@ -28,51 +40,95 @@ msgstr "Leer más"
 msgid "by"
 msgstr "por"
 
+#: ../inc/author.php:27 ../inc/author.php:37
+msgid "Authors"
+msgstr "Autores"
+
+#: ../inc/author.php:28
+msgid "Author"
+msgstr "Autor"
+
+#: ../inc/author.php:29
+msgid "Add author"
+msgstr "Añadir autor"
+
+#: ../inc/author.php:30
+msgid "Add new author"
+msgstr "Añadir nuevo autor"
+
+#: ../inc/author.php:31
+msgid "Edit author"
+msgstr "Editar autor"
+
+#: ../inc/author.php:32
+msgid "New author"
+msgstr "Nuevo autor"
+
+#: ../inc/author.php:33
+msgid "View author"
+msgstr "Exibir autor"
+
+#: ../inc/author.php:34
+msgid "Search author"
+msgstr "Buscar autor"
+
+#: ../inc/author.php:35
+msgid "No author found"
+msgstr "Ningún autor encontrado"
+
+#: ../inc/author.php:36
+msgid "No author found in the trash"
+msgstr "Ningún autor encontrado en el basurero"
+
+#: ../inc/author.php:43
+msgid "LandQuest authors"
+msgstr "Autores de LandQuest"
+
 #: ../inc/jeo-post-zoom.php:22
 msgid "Zoom"
 msgstr "Ampliar"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:43
+#: ../inc/gdocs-to-map/gdocs-to-map.php:46
 msgid "Flowers"
 msgstr "Flores"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:46
+#: ../inc/gdocs-to-map/gdocs-to-map.php:50
 msgid "MoW Irrigation"
 msgstr "MoW Irrigación"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:49
+#: ../inc/gdocs-to-map/gdocs-to-map.php:54
 msgid "MoW Boreholes"
 msgstr "MoW Perforaciones"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:52
+#: ../inc/gdocs-to-map/gdocs-to-map.php:58
 msgid "OXFAM Sand Dams"
 msgstr "OXFAM Presa de Arena"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:55
+#: ../inc/gdocs-to-map/gdocs-to-map.php:62
 msgid "OXFAM Boreholes"
 msgstr "OXFAM Perforaciones"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:58
+#: ../inc/gdocs-to-map/gdocs-to-map.php:66
 msgid "OXFAM Lakes"
 msgstr "OXFAM Lago"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:61
+#: ../inc/gdocs-to-map/gdocs-to-map.php:70
 msgid "OXFAM Rivers"
 msgstr "OXFAM Ríos"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:64
+#: ../inc/gdocs-to-map/gdocs-to-map.php:74
 msgid "OXFAM Rock Catchments"
 msgstr "OXFAM Captación en Roca"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:67
+#: ../inc/gdocs-to-map/gdocs-to-map.php:78
 msgid "OXFAM Springs"
 msgstr "OXFAM Manantiales"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:70
+#: ../inc/gdocs-to-map/gdocs-to-map.php:82
 msgid "OXFAM Wells"
 msgstr "OXFAM Pozos"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:73
+#: ../inc/gdocs-to-map/gdocs-to-map.php:86
 msgid "OXGFAM Earthpan"
 msgstr ""
 
