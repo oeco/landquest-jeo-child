@@ -14,6 +14,8 @@
 		// div to be used in Map Legend Control
 		legendDiv = "<div class='lq-map-legend'>\n<ul>\n"
 		
+		initializePopupTemplatesFunctions();
+		
 		/*
 		 * Layers
 		 */
@@ -69,13 +71,24 @@
 		
 	});
 	
+	function initializePopupTemplatesFunctions(){
+		$.each(layersInfo, function(i, aLayer) {
+			// if a template exists, generate it
+			if (layersInfo[i].popupTemplate) {
+				layersInfo[i].popupTemplateFunction = _.template(layersInfo[i].popupTemplate)
+			// if not, return a warning
+			} else {
+				layersInfo[i].popupTemplateFunction = function() { 
+					return '<div>Missing template for this item!</div>'
+				}
+			}
+    });
+	}
+	
 	function popupHtml(item) {
-		layer = item.marker_class;
-		// if(!templateFunctions[layer])
-		// 	templateFunctions[layer] = _.template(layersAdditionalInfo['flowers']['template'][language]);
-		// var template = templateFunctions[layer];
-		return '<div>Popup</div>';//template({item: item});
-    }
+		console.log(layersInfo[item.marker_class].popupTemplateFunction ({item: item}));
+		return layersInfo[item.marker_class].popupTemplateFunction ({item: item});
+	}
 		
 	
 	function buildMarker(m) {
@@ -88,9 +101,13 @@
 		
 		marker._data = m;
 
-		marker.bindPopup(popupHtml(m));
+
 		
 		marker.on('mouseover', function(e) {
+			if (!e.target.popupLoaded) {
+				marker.bindPopup(popupHtml(m));
+				e.target.popupLoaded = true;
+			}
 			e.target.previousOffset = e.target.options.zIndexOffset;
 			e.target.setZIndexOffset(1500);
 			e.target.openPopup();

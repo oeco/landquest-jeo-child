@@ -8,6 +8,8 @@
  */
 
 class LandQuest_GDocsToMap {
+	
+	var $gdocs_key = '0AudTRqkrNLbcdDh2XzdYeEExamFXUnNYN3k0N25iakE';
 
 	function __construct() {
 
@@ -43,12 +45,44 @@ class LandQuest_GDocsToMap {
 			'language' => $this->getLanguage(),
 			'layersInfo' => array(
 				'flowers' => array(
-						'title' => __('Flowers', 'landquest'),
-						'icon' => $base_url . '/img/icons/1.png'
+						'title' => __('Flowers Councils', 'landquest'),
+						'icon' => $base_url . '/img/icons/1.png',
+						'popupTemplate' => 
+								"<div class='lq-map-legend-item'>" .
+									"<h4>" . __('Flowers Council', 'landquest') . "</h4>" .
+									"<table>".
+										"<tr>" .
+											"<th>". __('Company', 'landquest') ."</th>" .
+											"<td><%= item['" . __('Company', 'landquest') . "'] %></td>".
+										"</tr>" .
+										"<tr>" .
+											"<th>" . __('Place', 'landquest') . "</th>" .
+											"<td><%= item['" . __('Place', 'landquest') . "'] %></td>" .
+										"</tr>" .
+									"</table>" .
+								"</div>"
 				),
 				'mow_irrigation' => array(
-						'title' => __('MoW Irrigation', 'landquest'),
-						'icon' => $base_url . '/img/icons/2.png'
+						'title' => __('MoW Irrigation Programmes', 'landquest'),
+						'icon' => $base_url . '/img/icons/2.png',
+						'popupTemplate' => 
+								"<div class='lq-map-legend-item'>" .
+									"<h4>" . __('MoW Irrigation Project', 'landquest') . "</h4>" .
+									"<table>".
+										"<tr>" .
+											"<th>". __('Name', 'landquest') ."</th>" .
+											"<td><%= item['" . __('Name', 'landquest') . "'] %></td>".
+										"</tr>" .
+										"<tr>" .
+											"<th>" . __('Irrigation Area', 'landquest') . "</th>" .
+											"<td><%= item['" . __('Irrigation Area', 'landquest') . "'] %></td>" .
+										"</tr>" .
+										"<tr>" .
+											"<th>" . __('Project', 'landquest') . "</th>" .
+											"<td><%= item['" . __('Project', 'landquest') . "'] %></td>" .
+										"</tr>" .
+									"</table>" .
+								"</div>"
 				),
 				'mow_boreholes' => array(
 						'title' => __('MoW Boreholes', 'landquest'),
@@ -87,29 +121,6 @@ class LandQuest_GDocsToMap {
 						'icon' => $base_url . '/img/icons/11.png'
 				)
 			)
-			// 'layers_info' => array(
-			// 	'flowers' => array(
-			// 			'title' => __('Flowers', 'landquest'),
-			// 			'template' => "<div class='lq-map-legend-item'>" .
-			// 											"<div class='title'>" . __('Flowers', 'landquest') . "</span>" .
-			// 											"<div class='title'>".__('Company', 'landquest').": <%= item.".__('Company', 'landquest')." %></div>".
-			// 									  "</div>"
-			// 	),
-			// 	'mow_irrigation' => array(
-			// 			'title' => __('MoW Irrigation', 'landquest'),
-			// 			'template' => "<div class='lq-map-legend-item'>".
-			// 											"<div class='title'>" . __('Flowers', 'landquest') . "</span>".
-			// 											"<div class='title'>Company: <%= item.Company %></div>".
-			// 									  "</div>"
-			// 	),
-			// 	'mow_boreholes' => array(
-			// 			'title' => __('MoW Boreholes', 'landquest'),
-			// 			'template' => "<div class='lq-map-legend-item'>".
-			// 											"<div class='title'>" . __('Flowers', 'landquest') . "</span>".
-			// 											"<div class='title'>Company: <%= item.Company %></div>".
-			// 									  "</div>"
-			// 	)
-			// )
 		));
 
 	}
@@ -117,17 +128,17 @@ class LandQuest_GDocsToMap {
 	function get_sources() {
 
 		return array(
-			'flowers' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=0&output=csv',
-			'mow_irrigation' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=1&output=csv',
-			'mow_boreholes' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=2&output=csv',
-			'oxfam_sand_dams' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=3&output=csv',
-			'oxfam_boreholes' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=4&output=csv',
-			'oxfam_lakes' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=5&output=csv',
-			'oxfam_rivers' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=6&output=csv',
-			'oxfam_rock_catchments' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=7&output=csv',
-			'oxfam_springs' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=8&output=csv',
-			'oxfam_wells' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=9&output=csv',
-			'oxfam_earthpan' => 'https://docs.google.com/spreadsheet/pub?key=0AtAM3LpAmlqCdEtxRlYxalRiWlNpcTE4bFY3OU5Wb3c&single=true&gid=10&output=csv'
+			'flowers' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=0&output=csv',
+			'mow_irrigation' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=1&output=csv',
+			'mow_boreholes' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=2&output=csv',
+			'oxfam_sand_dams' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=3&output=csv',
+			'oxfam_boreholes' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=4&output=csv',
+			'oxfam_lakes' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=5&output=csv',
+			'oxfam_rivers' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=6&output=csv',
+			'oxfam_rock_catchments' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=7&output=csv',
+			'oxfam_springs' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=8&output=csv',
+			'oxfam_wells' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=9&output=csv',
+			'oxfam_earthpan' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=10&output=csv'
 		);
 	}
 
@@ -140,8 +151,8 @@ class LandQuest_GDocsToMap {
 
 		foreach($sources as $key => $csv) {
 
-			// uncomment this if you need to fetch from google docs every time
-//			delete_transient($key);
+			// uncomment this if you need to fetch from google docs at every access
+			// delete_transient($key);
 
 			// fetch transient data
 			$data[$key] = get_transient($key);

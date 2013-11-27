@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LandQuest\n"
-"POT-Creation-Date: 2013-11-27 17:05-0300\n"
-"PO-Revision-Date: 2013-11-27 17:07-0300\n"
+"POT-Creation-Date: 2013-11-27 19:44-0300\n"
+"PO-Revision-Date: 2013-11-27 19:44-0300\n"
 "Last-Translator: Vitor George <vitor.george@gmail.com>\n"
 "Language-Team: OEcoLab\n"
 "Language: es\n"
@@ -88,49 +88,79 @@ msgstr "Autores de LandQuest"
 msgid "Zoom"
 msgstr "Ampliar"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:46
-msgid "Flowers"
-msgstr "Flores"
+#: ../inc/gdocs-to-map/gdocs-to-map.php:48
+msgid "Flowers Councils"
+msgstr "Concejos de Flores "
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:50
-msgid "MoW Irrigation"
-msgstr "MoW Irrigación"
+#: ../inc/gdocs-to-map/gdocs-to-map.php:52
+msgid "Flowers Council"
+msgstr "Concejo de Flores"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:54
+#: ../inc/gdocs-to-map/gdocs-to-map.php:55
+#: ../inc/gdocs-to-map/gdocs-to-map.php:56
+msgid "Company"
+msgstr "Companía"
+
+#: ../inc/gdocs-to-map/gdocs-to-map.php:59
+#: ../inc/gdocs-to-map/gdocs-to-map.php:60
+msgid "Place"
+msgstr "Localidad"
+
+#: ../inc/gdocs-to-map/gdocs-to-map.php:66
+msgid "MoW Irrigation Programmes"
+msgstr "Programa de Irrigación de MoW"
+
+#: ../inc/gdocs-to-map/gdocs-to-map.php:70
+msgid "MoW Irrigation Project"
+msgstr "Proyecto de Irrigación MoW"
+
+#: ../inc/gdocs-to-map/gdocs-to-map.php:73
+#: ../inc/gdocs-to-map/gdocs-to-map.php:74
+msgid "Name"
+msgstr "Nombre"
+
+#: ../inc/gdocs-to-map/gdocs-to-map.php:77
+#: ../inc/gdocs-to-map/gdocs-to-map.php:78
+msgid "Irrigation Area"
+msgstr "Área Irrigada"
+
+#: ../inc/gdocs-to-map/gdocs-to-map.php:81
+#: ../inc/gdocs-to-map/gdocs-to-map.php:82
+msgid "Project"
+msgstr "Proyecto"
+
+#: ../inc/gdocs-to-map/gdocs-to-map.php:88
 msgid "MoW Boreholes"
 msgstr "MoW Perforaciones"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:58
+#: ../inc/gdocs-to-map/gdocs-to-map.php:92
 msgid "OXFAM Sand Dams"
 msgstr "OXFAM Presa de Arena"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:62
+#: ../inc/gdocs-to-map/gdocs-to-map.php:96
 msgid "OXFAM Boreholes"
 msgstr "OXFAM Perforaciones"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:66
+#: ../inc/gdocs-to-map/gdocs-to-map.php:100
 msgid "OXFAM Lakes"
 msgstr "OXFAM Lago"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:70
+#: ../inc/gdocs-to-map/gdocs-to-map.php:104
 msgid "OXFAM Rivers"
 msgstr "OXFAM Ríos"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:74
+#: ../inc/gdocs-to-map/gdocs-to-map.php:108
 msgid "OXFAM Rock Catchments"
 msgstr "OXFAM Captación en Roca"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:78
+#: ../inc/gdocs-to-map/gdocs-to-map.php:112
 msgid "OXFAM Springs"
 msgstr "OXFAM Manantiales"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:82
+#: ../inc/gdocs-to-map/gdocs-to-map.php:116
 msgid "OXFAM Wells"
 msgstr "OXFAM Pozos"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:86
+#: ../inc/gdocs-to-map/gdocs-to-map.php:120
 msgid "OXGFAM Earthpan"
 msgstr ""
-
-#~ msgid "Company"
-#~ msgstr "Companía"
