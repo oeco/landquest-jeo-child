@@ -1153,6 +1153,9 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
 .map-container .map .leaflet-popup-content .author-bubble .meta p a:hover {
   color: #333;
 }
+.map-container .map .leaflet-popup-content .author-bubble p {
+  margin: 0;
+}
 .displaying-map #content.single-post {
   margin-top: 40px;
 }
