@@ -447,6 +447,25 @@ h6 {
   -o-border-radius: 0;
   border-radius: 0;
 }
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper table {
+  width: 100%;
+  margin: 5px 0 15px;
+  border-top: 1px dotted rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.4);
+}
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper table tr {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+}
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper table tr th,
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper table tr td {
+  padding: 10px;
+}
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper table tr th {
+  font-weight: 800;
+  padding-right: 10px;
+  text-align: center;
+  border-right: 1px dotted rgba(0, 0, 0, 0.1);
+}
 .map-container .map .leaflet-popup .leaflet-popup-tip-container {
   z-index: 2;
   overflow: visible;
