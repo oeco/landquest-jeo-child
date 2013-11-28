@@ -42,9 +42,9 @@ class LandQuest_Partner {
 		
 		$args = array( 
 			'labels' => $labels,
-			'hierarchical' => false,
+			'hierarchical' => true,
 			'description' => __('LandQuest authors', 'landquest'),
-			'supports' => array('title', 'thumbnail'),
+			'supports' => array('title', 'thumbnail', 'page-attributes'),
 			'public' => false,
 			'show_ui' => true,
 			'has_archive' => false,

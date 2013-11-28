@@ -6,6 +6,7 @@ function landquest_setup() {
 	add_image_size('bubble-thumbnail', 100, 100, true);
 	add_image_size('front-loop', 360, 240, true);
 	add_image_size('small-thumbnail', 260, 173, true);
+	add_image_size('footer-thumbnail', 100, 80);
 	load_child_theme_textdomain('landquest', get_stylesheet_directory() . '/languages');
 
 }
@@ -54,9 +55,15 @@ define('ACF_LITE', false);
 require_once(STYLESHEETPATH . '/inc/acf/acf.php');
 
 include_once(STYLESHEETPATH . '/inc/author.php');
+include_once(STYLESHEETPATH . '/inc/contact/contact.php');
 include_once(STYLESHEETPATH . '/inc/partner.php');
 include_once(STYLESHEETPATH . '/inc/gdocs-to-map/gdocs-to-map.php');
 include_once(STYLESHEETPATH . '/inc/jeo-post-zoom.php');
+
+function landquest_contact_email() {
+	return 'miguel@cardume.art.br';
+}
+add_filter('landquest_contact_email', 'landquest_contact_email');
 
 /*
  * About map
@@ -69,5 +76,41 @@ function landquest_about_marker_query($query) {
 	return $query;
 }
 add_filter('jeo_marker_base_query', 'landquest_about_marker_query');
+
+/*
+ * Social APIs
+ */
+
+function landquest_social_apis() {
+
+        // Facebook
+        ?>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=1485880808304742";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <?php
+
+        // Twitter
+        ?>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <?php
+
+        // Google Plus
+        ?>
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+        <?php
+}
+add_action('wp_footer', 'landquest_social_apis');
 
 ?>

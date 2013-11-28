@@ -995,50 +995,110 @@ html#map-embed {
 }
 
 #colophon {
-	background: rgba(0, 0, 0, 0.7);
+	background: #d0d1d3;
 	width: 100%;
 	color: #f0f0f0;
 	padding: 20px 0 15px 0;
 	margin-top: 40px;
-	a {
+	position: relative;
+	.placeholder(#fff);
+	&:before {
+		content: '';
+		width: 100%;
+		top: -9px;
+		height: 9px;
+		background: url(../img/orn1f.png);
+		position: absolute;
+	}
+	h3 {
+		font-weight: 200;
+		color: #4b3b21;
+	}
+	.fb-like-box {
+		margin: 0 -10px;
+		display: block;
+		width: 100%;
+		span,
+		iframe {
+			display: block !important;
+			width: 100% !important;
+		}
+	}
+	p.input-container {
+		position: relative;
+		margin: 0 0 10px;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			bottom: -9px;
+			height: 8px;
+			background: url(../img/orn1e1.png);
+		}	
+	}
+	p.submit-container {
+		background: #fff;
+		position: relative;
+		&:before {
+			content: '';
+			width: 20%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background: url(../img/orn2f.png) left center no-repeat;
+			position: absolute;
+			pointer-events: none;
+		}
+		&:after {
+			content: '';
+			width: 20%;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background: url(../img/orn2f.png) right center no-repeat;
+			position: absolute;
+			pointer-events: none;
+		}
+		input {
+			color: #459386;
+			font-weight: 800;
+			text-transform: lowercase;
+			cursor: pointer;
+		}
+	}
+	.message p {
+		background: #c0c0c0;
+		border: 1px solid #bbb;
+		font-size: 12px;
+		font-weight: 800;
+		text-align: center;
+		padding: 10px;
+		margin: 0;
+	}
+	input,
+	textarea {
+		background: transparent;
 		color: #fff;
-		text-decoration: none;
-		font-weight: 600;
-		&:hover {
-			color: #eee;
-		}
+		border: 1px solid #fff;
+		width: 100%;
+		.box-sizing(border-box);
+		.border-radius(0 0 0);
+		padding: 10px;
+		margin: 0;
 	}
-	#footer-nav {
-		.menu {
-			margin: 0;
-			padding: 0;
-			font-size: 12px;
-			> li {
-				float: left;
-				margin: 0 40px 0 0;
-				> a {
-					font-weight: 800;
-					text-transform: uppercase;
-					margin-bottom: 5px;
-					display: block;
-				}
-				ul {
-					margin: 0;
-					padding: 0;
-					li {
-						margin: 0;
-						padding: 0;
-						font-size: 11px;
-					}
-				}
+	textarea {
+		height: 200px;
+	}
+	.partner-list {
+		li {
+			height:80px;
+			line-height: 80px;
+			vertical-align: middle;
+			display: table-cell;
+			padding: 0 10px 10px 0;
+			float: left;
+			img {
 			}
-		}
-	}
-	.credits {
-		font-size: 11px;
-		text-align: right;
-		p {
-			margin: 0;
 		}
 	}
 }

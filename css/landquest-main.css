@@ -1078,50 +1078,125 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
   background: #eef7e2;
 }
 #colophon {
-  background: rgba(0, 0, 0, 0.7);
+  background: #d0d1d3;
   width: 100%;
   color: #f0f0f0;
   padding: 20px 0 15px 0;
   margin-top: 40px;
+  position: relative;
 }
-#colophon a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
+#colophon ::-webkit-input-placeholder {
+  color: #ffffff;
 }
-#colophon a:hover {
-  color: #eee;
+#colophon :-moz-placeholder {
+  color: #ffffff;
 }
-#colophon #footer-nav .menu {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
+#colophon ::-moz-placeholder {
+  color: #ffffff;
 }
-#colophon #footer-nav .menu > li {
-  float: left;
-  margin: 0 40px 0 0;
+#colophon ::-ms-input-placeholder {
+  color: #ffffff;
 }
-#colophon #footer-nav .menu > li > a {
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 5px;
+#colophon:before {
+  content: '';
+  width: 100%;
+  top: -9px;
+  height: 9px;
+  background: url(../img/orn1f.png);
+  position: absolute;
+}
+#colophon h3 {
+  font-weight: 200;
+  color: #4b3b21;
+}
+#colophon .fb-like-box {
+  margin: 0 -10px;
   display: block;
+  width: 100%;
 }
-#colophon #footer-nav .menu > li ul {
+#colophon .fb-like-box span,
+#colophon .fb-like-box iframe {
+  display: block !important;
+  width: 100% !important;
+}
+#colophon p.input-container {
+  position: relative;
+  margin: 0 0 10px;
+}
+#colophon p.input-container:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: -9px;
+  height: 8px;
+  background: url(../img/orn1e1.png);
+}
+#colophon p.submit-container {
+  background: #fff;
+  position: relative;
+}
+#colophon p.submit-container:before {
+  content: '';
+  width: 20%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/orn2f.png) left center no-repeat;
+  position: absolute;
+  pointer-events: none;
+}
+#colophon p.submit-container:after {
+  content: '';
+  width: 20%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: url(../img/orn2f.png) right center no-repeat;
+  position: absolute;
+  pointer-events: none;
+}
+#colophon p.submit-container input {
+  color: #459386;
+  font-weight: 800;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+#colophon .message p {
+  background: #c0c0c0;
+  border: 1px solid #bbb;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px;
   margin: 0;
-  padding: 0;
 }
-#colophon #footer-nav .menu > li ul li {
+#colophon input,
+#colophon textarea {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0 0 0;
+  -khtml-border-radius: 0 0 0;
+  -moz-border-radius: 0 0 0;
+  -o-border-radius: 0 0 0;
+  border-radius: 0 0 0;
+  padding: 10px;
   margin: 0;
-  padding: 0;
-  font-size: 11px;
 }
-#colophon .credits {
-  font-size: 11px;
-  text-align: right;
+#colophon textarea {
+  height: 200px;
 }
-#colophon .credits p {
-  margin: 0;
+#colophon .partner-list li {
+  height: 80px;
+  line-height: 80px;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0 10px 10px 0;
+  float: left;
 }
 .single .map-container .map {
   height: 140%;

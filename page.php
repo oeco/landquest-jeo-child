@@ -25,7 +25,8 @@
 					</div>
 				</div>
 				<?php
-				if(is_page('about')) :
+				$hide_partners = true;
+				if(is_page('about') && !$hide_partners) :
 					$partners = get_posts(array('post_type' => 'partner', 'posts_per_page' => -1));
 					if($partners) :
 						global $post;
