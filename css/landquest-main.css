@@ -1308,6 +1308,47 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
 #content.single-post #post-meta p.post-author a {
   color: #3e9082;
 }
+#content.single-post #post-share h3 {
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: lowercase;
+}
+#content.single-post #post-share h3:before {
+  content: ' :: ';
+}
+#content.single-post #post-share h3:after {
+  content: ' :: ';
+}
+#content.single-post #post-share .share {
+  width: 464px;
+  height: 36px;
+  margin: 0 auto;
+  background: url(../img/share-bg.png) 0 5px no-repeat;
+  position: relative;
+}
+#content.single-post #post-share .share li {
+  position: absolute;
+  top: 2px;
+}
+#content.single-post #post-share .share li a {
+  width: 38px;
+  height: 36px;
+  text-indent: -9999px;
+  display: block;
+}
+#content.single-post #post-share .share li.facebook {
+  left: 90px;
+  background: url(../img/share-facebook.png);
+}
+#content.single-post #post-share .share li.twitter {
+  left: 213px;
+  background: url(../img/share-twitter.png);
+}
+#content.single-post #post-share .share li.gplus {
+  left: 335px;
+  background: url(../img/share-gplus.png);
+}
 #content h3 {
   color: #ddc48e;
   font-family: "Galdeano";

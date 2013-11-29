@@ -34,7 +34,19 @@
 							</p>
 						</aside>
 					<?php endif; ?>
-					<?php the_content(); ?>
+					<section id="post-content" class="row">
+						<?php the_content(); ?>
+					</section>
+					<section id="post-share" class="row">
+						<div class="share-container">
+							<h3><?php _e('Share', 'landquest'); ?></h3>
+							<ul class="share">
+								<li class="facebook"><a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" rel="external" target="_blank"><?php _e('Share on Facebook', 'landquest'); ?></a></li>
+								<li class="twitter"><a href="https://www.twitter.com/intent/tweet?text=<?php the_title(); ?>&url=<?php the_permalink(); ?>" rel="external" target="_blank"><?php _e('Tweet about it', 'landquest'); ?></a></li>
+								<li class="gplus"><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" rel="external" target="_blank"><?php _e('Share on Google Plus', 'landquest'); ?></a></li>
+							</ul>
+						</div>
+					</section>
 				</div>
 			</div>
 		</section>
