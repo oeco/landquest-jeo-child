@@ -32,14 +32,9 @@
 			<?php if(!empty($creators)) : ?>
 				<h3><?php _e('Project by', 'landquest'); ?></h3>
 				<ul class="partner-list row">
-					<?php foreach($partners as $partner) :
-						if(get_field('partner_is_creator', $partner->ID)) {
-							$creators[] = $partner;
-							continue;
-						}
-						?>
+					<?php foreach($creators as $creator) : ?>
 						<li>
-							<a href="<?php echo get_permalink($partner->ID); ?>" title="<?php echo get_the_title($partner->ID); ?>"><?php echo get_the_post_thumbnail($partner->ID, 'footer-thumbnail', array('alt' => get_the_title($partner->ID))); ?></a>
+							<a href="<?php echo get_permalink($creator->ID); ?>" title="<?php echo get_the_title($creator->ID); ?>"><?php echo get_the_post_thumbnail($creator->ID, 'footer-thumbnail', array('alt' => get_the_title($creator->ID))); ?></a>
 						</li>
 					<?php endforeach; ?>
 				</ul>

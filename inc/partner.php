@@ -76,6 +76,15 @@ class LandQuest_Partner {
 						'formatting' => 'html',
 						'maxlength' => '',
 					),
+					array(
+						'key' => 'field_partner_is_creator',
+						'label' => __('Creator', 'landquest'),
+						'message' => __('This is a creator', 'landquest'),
+						'name' => 'parner_is_creator',
+						'type' => 'true_false',
+						'default_value' => 0,
+						'instructions' => __('Check this to add this organization to the list of creators ("by" section on the footer)', 'landquest')
+					),
 				),
 				'location' => array (
 					array (
