@@ -55,6 +55,38 @@
 					endif;
 				endif;
 				?>
+				<?php
+				$hide_authors = false;
+				if(is_page('about') && !$hide_authors) :
+					$authors = get_posts(array('post_type' => 'author', 'posts_per_page' => -1));
+					if($authors) :
+						global $post;
+						?>
+							<div id="lq-authors" class="row">
+								<div class="twelve columns">
+									<h3><?php _e('Authors', 'landquest'); ?></h3>
+                                    <?php foreach($authors as $author) :
+                                        $post = $author;
+                                        setup_postdata($post);
+                                        ?>
+                                        <div class="row">
+                                            <article id="author-<?php the_ID(); ?>" class="author-item">
+                                                <a href="<?php the_permalink(); ?>" target="_blank" rel="external"><?php the_post_thumbnail('small-thumbnail', array('alt' => get_the_title())); ?></a>
+                                                <h4><a href="<?php the_permalink(); ?>" target="_blank" rel="external"><?php the_title(); ?></a></h4>
+                                                <p class="website"><a href="<?php the_permalink(); ?>" target="_blank" rel="external"><?php the_field('author_url'); ?></a></p>
+                                                <?php the_content(); ?>
+                                            </article>
+                                        </div>
+                                        <?php
+                                        wp_reset_postdata();
+                                    endforeach;
+                                    ?>
+                                </div>
+							</div>
+						<?php
+					endif;
+				endif;
+				?>
 			</div>
 		</section>
 	</article>

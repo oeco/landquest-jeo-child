@@ -57,6 +57,7 @@ require_once(STYLESHEETPATH . '/inc/acf/acf.php');
 include_once(STYLESHEETPATH . '/inc/author.php');
 include_once(STYLESHEETPATH . '/inc/contact/contact.php');
 include_once(STYLESHEETPATH . '/inc/partner.php');
+include_once(STYLESHEETPATH . '/inc/dataset.php');
 include_once(STYLESHEETPATH . '/inc/gdocs-to-map/gdocs-to-map.php');
 include_once(STYLESHEETPATH . '/inc/jeo-post-zoom.php');
 
@@ -112,5 +113,25 @@ function landquest_social_apis() {
         <?php
 }
 add_action('wp_footer', 'landquest_social_apis');
+
+function landquest_home_url($path = '/') {
+
+    $url = home_url($path);
+    
+    if(function_exists('qtrans_convertURL')) {
+        $url = qtrans_convertURL($url);
+    }
+    
+    return $url;
+}
+
+function landquest_body_class($class) {
+    if(is_page()) {
+        global $post;
+        $class[] = 'page-' . $post->post_name;
+    }
+    return $class;
+}
+add_filter('body_class', 'landquest_body_class');
 
 ?>

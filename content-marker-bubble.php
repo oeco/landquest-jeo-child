@@ -8,19 +8,16 @@ if(get_post_type() == 'author') :
 	?>
 	
 	<div class="author-bubble">
-		<div class="clearfix">
-			<?php the_post_thumbnail('bubble-thumbnail'); ?>
-			<h4><?php the_title(); ?></h4>
-			<div class="meta">
-				<?php if(get_field('author_activity')) : ?>
-					<p class="activity meta-item"><?php the_field('author_activity'); ?></p>
-				<?php endif; ?>
-				<?php if(get_field('author_url')) : ?>
-					<p class="website meta-item"><a href="<?php the_field('author_url'); ?>" rel="external" target="_blank"><?php the_field('author_url'); ?></a></p>
-				<?php endif; ?>
-			</div>
-		</div>
-		<?php the_excerpt(); ?>
+        <?php the_post_thumbnail('bubble-thumbnail'); ?>
+        <h4><?php the_title(); ?></h4>
+        <div class="meta">
+            <?php if(get_field('author_activity')) : ?>
+                <p class="activity meta-item"><?php the_field('author_activity'); ?></p>
+            <?php endif; ?>
+            <?php if(get_field('author_url')) : ?>
+                <p class="website meta-item"><a href="<?php the_field('author_url'); ?>" rel="external" target="_blank"><?php the_field('author_url'); ?></a></p>
+            <?php endif; ?>
+        </div>
 	</div>
 	<?php
 

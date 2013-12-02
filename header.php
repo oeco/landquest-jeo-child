@@ -32,8 +32,10 @@
 					<nav>
 						<ul>
 							<li>
-								<span class='lsf'>&#xE051;</span>
-								<?php _e('about', 'landquest'); ?>
+                                <a href="<?php echo landquest_home_url('/about/'); ?>" title="<?php _e('About', 'landquest'); ?>">
+                                    <span class='lsf'>&#xE051;</span>
+                                    <?php _e('about', 'landquest'); ?>
+                                </a>
 							</li>
 							<li>
 								<span class='lsf'>&#xE055;</span>
@@ -50,7 +52,7 @@
 			<div class="four columns">
 				<div class="site-meta">
 					<h1>
-						<a href="<?php echo home_url('/'); ?>"><?php bloginfo('title'); ?><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" /></a>
+						<a href="<?php echo landquest_home_url('/'); ?>"><?php bloginfo('title'); ?><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" /></a>
 					</h1>
 				</div>
 			</div>
