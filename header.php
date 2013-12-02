@@ -38,8 +38,10 @@
                                 </a>
 							</li>
 							<li>
-								<span class='lsf'>&#xE055;</span>
-								<?php _e('data and resources', 'landquest'); ?>
+                                <a href="<?php echo landquest_home_url('/datasets/'); ?>" title="<?php _e('Data & Resources', 'landquest'); ?>">
+                                    <span class='lsf'>&#xE055;</span>
+                                    <?php _e('data and resources', 'landquest'); ?>
+                                </a>
 							</li>
 							<li>
 								<span class='lsf'>&#xE08a;</span>
