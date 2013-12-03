@@ -30,7 +30,7 @@
                                     $source = array_shift($source);
                                     $source_url = get_field('url', 'source_' . $source->term_id);
                                     ?>
-                                    <p class="source"><a href="<?php echo $source_url; ?>" target="_blank" rel="external"><?php echo $source->name; ?></a></p>
+                                    <p class="source">Source: <a href="<?php echo $source_url; ?>" target="_blank" rel="external"><?php echo $source->name; ?></a></p>
                                 <?php endif; ?>
                                 <?php
                                 $license = get_the_terms($post->ID, 'license');
@@ -38,7 +38,7 @@
                                     $license = array_shift($license);
                                     $license_url = get_field('url', 'license_' . $license->term_id);
                                     ?>
-                                    <p class="license"><a href="<?php echo $license_url; ?>" target="_blank" rel="external"><?php echo $license->name; ?></a></p>
+                                    <p class="license">License: <a href="<?php echo $license_url; ?>" target="_blank" rel="external"><?php echo $license->name; ?></a></p>
                                 <?php endif; ?>
 							</section>
 							<aside class="actions clearfix">

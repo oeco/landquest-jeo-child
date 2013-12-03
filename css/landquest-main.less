@@ -659,6 +659,54 @@ html#map-embed {
 			}
 		}
 	}
+	.download-button {
+		text-align: center;
+		color: #00706e;
+		font-size: 12px;
+		text-transform: lowercase;
+		font-weight: 600;
+		background: #74d8da;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 43px;
+			background: url(../img/orn2c1.png) center no-repeat;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 43px;
+			background: url(../img/orn2c1.png) center no-repeat;
+		}
+		a {
+			text-decoration: none;
+			color: #00706e;
+			display: block;
+			padding: 10px 0;
+			position: relative;
+			z-index: 2;
+			&:hover {
+				color: #333;
+			}
+		}
+	}
+	.source,
+	.license {
+		margin: 0;
+		font-size: 14px;
+		line-height: 18px;
+		font-family: "Galdeano";
+		a {
+			text-decoration: none;
+		}
+	}
 }
 
 #sidebar {
@@ -782,22 +830,52 @@ html#map-embed {
             }
         }
         .download-button {
-            background: #74d8da;
             text-align: center;
             color: #00706e;
             font-size: 12px;
             text-transform: lowercase;
             font-weight: 600;
+			background: #74d8da;
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 43px;
+				background: url(../img/orn2c1.png) center no-repeat;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 43px;
+				background: url(../img/orn2c1.png) center no-repeat;
+			}
             a {
                 text-decoration: none;
                 color: #00706e;
                 display: block;
                 padding: 5px 0;
+				position: relative;
+				z-index: 2;
                 &:hover {
                     color: #333;
                 }
             }
         }
+		.source,
+		.license {
+			margin: 0;
+			font-size: 12px;
+			font-family: "Galdeano";
+			a {
+				text-decoration: none;
+			}
+		}
     }
 }
 
@@ -979,6 +1057,7 @@ html#map-embed {
 	p.input-container {
 		position: relative;
 		margin: 0 0 10px;
+		background: transparent;
 		&:after {
 			content: '';
 			position: absolute;
@@ -1311,5 +1390,77 @@ html#map-embed {
 	}	
 }
 
-#jeo-share-widget #configuration {
+.landquest-contact-form {
+	max-width: 600px;
+	input,
+	textarea {
+		width: 100%;
+		.box-sizing(border-box);
+	}
+	textarea {
+		height: 200px;
+	}
+	p.input-container {
+		position: relative;
+		margin: 0 0 10px;
+		background: #f0f0f0;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			bottom: -9px;
+			height: 8px;
+			background: url(../img/orn1g.png);
+		}	
+	}
+	p.submit-container {
+		background: #f0f0f0;
+		position: relative;
+		&:before {
+			content: '';
+			width: 20%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background: url(../img/orn2d1.png) left center no-repeat;
+			position: absolute;
+			pointer-events: none;
+		}
+		&:after {
+			content: '';
+			width: 20%;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background: url(../img/orn2d1.png) right center no-repeat;
+			position: absolute;
+			pointer-events: none;
+		}
+		input {
+			color: #459386;
+			font-weight: 800;
+			text-transform: lowercase;
+			cursor: pointer;
+		}
+	}
+	.message p {
+		background: #c0c0c0;
+		border: 1px solid #bbb;
+		font-size: 12px;
+		font-weight: 800;
+		text-align: center;
+		padding: 10px;
+		margin: 0;
+	}
+	input,
+	textarea {
+		background: transparent;
+		color: #fff;
+		border: 1px solid #fff;
+		width: 100%;
+		.box-sizing(border-box);
+		.border-radius(0 0 0);
+		padding: 10px;
+		margin: 0;
+	}
 }

@@ -151,6 +151,7 @@ class LandQuest_DataSets {
 						'formatting' => 'html',
 						'maxlength' => '',
 					),
+					/*
 					array (
 						'key' => 'field_5266b48018b57',
 						'label' => 'Preview url',
@@ -164,6 +165,7 @@ class LandQuest_DataSets {
 						'formatting' => 'html',
 						'maxlength' => '',
 					),
+					*/
 				),
 				'location' => array (
 					array (

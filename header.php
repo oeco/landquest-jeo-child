@@ -44,8 +44,10 @@
                                 </a>
 							</li>
 							<li>
-								<span class='lsf'>&#xE08a;</span>
-								<?php _e('contact', 'landquest'); ?>
+                                <a href="<?php echo landquest_home_url('/contact/'); ?>" title="<?php _e('Contact', 'landquest'); ?>">
+									<span class='lsf'>&#xE08a;</span>
+									<?php _e('contact', 'landquest'); ?>
+								</a>
 							</li>
 						</ul>
 					</nav>

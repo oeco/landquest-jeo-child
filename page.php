@@ -2,7 +2,7 @@
 
 <?php if(have_posts()) : the_post(); ?>
 
-	<?php jeo_map(); ?>
+	<?php if(is_page('about')) jeo_map(); ?>
 
 	<article id="content" class="single-post">
 		<header id="page-header" class="page-header">
