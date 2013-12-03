@@ -19,6 +19,7 @@ class LandQuest_Author {
 		$this->register_field_group();
 		$this->register_relationship_field_group();
 		add_filter('jeo_marker_icon', array($this, 'marker_icon'), 10, 2);
+		add_filter('post_type_link', array($this, 'post_link'), 10, 2);
 		
 	}
 
@@ -157,6 +158,13 @@ class LandQuest_Author {
 
 	}
 
+	function post_link($permalink, $post) {
+			if(get_post_type($post->ID) == 'author') {
+					$permalink = get_field('author_url', $post->ID);
+			}
+			return $permalink;
+	}
+
 	
 	function marker_icon($icon, $post) {
 		if(get_post_type($post->ID) == 'author') {
@@ -164,8 +172,7 @@ class LandQuest_Author {
 				'iconUrl' => get_stylesheet_directory_uri() . '/img/icons/author-icon-small.png',
 				'iconSize' => array(32, 32),
 				'iconAnchor' => array(16, 16),
-				'popupAnchor' => array(0, -20),
-				'markerId' => 'none'
+				'popupAnchor' => array(0, -20)
 			);
 		}
 		return $icon;

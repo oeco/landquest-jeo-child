@@ -17,7 +17,7 @@ function landquest_scripts() {
 	define('WP_DEBUG', true);
 	
 	// remove jeo site scripts
-	wp_deregister_script('jeo-site');
+	//wp_deregister_script('jeo-site');
 	wp_deregister_style('jeo-main');
 	
 	// fonts
@@ -133,5 +133,11 @@ function landquest_body_class($class) {
     return $class;
 }
 add_filter('body_class', 'landquest_body_class');
+
+function landquest_disable_cache() {
+	return false;
+}
+add_filter('jeo_markers_enable_transient', 'landquest_disable_cache');
+add_filter('jeo_markers_enable_browser_caching', 'landquest_disable_cache');
 
 ?>

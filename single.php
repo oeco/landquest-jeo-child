@@ -52,6 +52,8 @@
 		</section>
 	</article>
 
+	<?php if(function_exists('related_posts')) related_posts(); ?>
+
 <?php endif; ?>
 
 <?php get_footer(); ?>

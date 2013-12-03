@@ -28,16 +28,17 @@ h4,
 h5,
 h6 {
   font-family: "Galdeano", "Helvetica", "Arial", sans-serif;
+  color: #ddc48e;
 }
 h1,
 h2 {
-  font-weight: 800;
+  font-weight: 200;
 }
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 200;
 }
 .alignleft {
   float: left;
@@ -358,6 +359,15 @@ h6 {
   -moz-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+}
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper h1,
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper h2,
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper h3,
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper h4,
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper h5,
+.map-container .map .leaflet-popup .leaflet-popup-content-wrapper h6 {
+  color: #4c3d20;
+  font-weight: 600;
 }
 .map-container .map .leaflet-popup .leaflet-popup-content-wrapper table {
   width: 100%;
@@ -779,7 +789,15 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
   margin-top: 40px;
 }
 .posts-section .posts-list li {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+.posts-section .posts-list.small article .post-header {
+  padding: 10px 10px 0;
+}
+.posts-section .posts-list.small article .post-header h3 {
+  font-size: 22px;
+  line-height: 28px;
+  margin: 0 0 15px;
 }
 .posts-section .posts-list article {
   -webkit-box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
@@ -1251,6 +1269,9 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
 }
 .map-container .map .leaflet-popup-content {
   max-width: none;
+}
+.map-container .map .leaflet-popup-content .author-bubble {
+  min-width: 220px;
 }
 .map-container .map .leaflet-popup-content .author-bubble .wp-post-image {
   float: left;
