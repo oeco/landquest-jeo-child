@@ -52,6 +52,25 @@
 		</section>
 	</article>
 
+	<?php
+	if(get_post_type() == 'author') :
+		landquest_query_author_posts();
+		if(have_posts()) :
+			?>
+			<section id="author-posts">
+				<div class="container">
+					<div class="twelve columns">
+						<h3><?php _e('Investigations by', 'landquest'); ?> <?php the_title(); ?></h3>
+					</div>
+				</div>
+				<?php get_template_part('loop', 'small'); ?>
+			</section>
+			<?php
+		endif;
+		wp_reset_query();
+	endif;
+	?>
+
 	<?php if(function_exists('related_posts')) related_posts(); ?>
 
 <?php endif; ?>

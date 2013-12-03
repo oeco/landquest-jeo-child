@@ -19,7 +19,7 @@ class LandQuest_Author {
 		$this->register_field_group();
 		$this->register_relationship_field_group();
 		add_filter('jeo_marker_icon', array($this, 'marker_icon'), 10, 2);
-		add_filter('post_type_link', array($this, 'post_link'), 10, 2);
+		//add_filter('post_type_link', array($this, 'post_link'), 10, 2);
 		
 	}
 
@@ -187,10 +187,53 @@ class LandQuest_Author {
 
 	}
 	
+	function get_author_posts_query($author_id = false) {
+		
+		global $post;
+		$author_id = $author_id ? $author_id : $post->ID;
+		
+		return array(
+			'posts_per_page' => -1,
+			'post_type' => 'any',
+			'meta_query' => array(
+				array(
+					'key' => 'post_author',
+					'value' => $author_id
+				)
+			)
+		);
+	}
+	
+	function get_author_posts($author_id = false) {
+
+		global $post;
+		$author_id = $author_id ? $author_id : $post->ID;
+		
+		return get_posts($this->get_author_posts_query($author_id));
+
+	}
+	
+	function query_author_posts($author_id = false) {
+
+		global $post;
+		$author_id = $author_id ? $author_id : $post->ID;
+		
+		query_posts($this->get_author_posts_query($author_id));
+		
+	}
+	
 }
 
 $GLOBALS['landquest_author'] = new LandQuest_Author();
 
 function landquest_get_author($post_id = false) {
 	return $GLOBALS['landquest_author']->get_post_author($post_id);
+}
+
+function landquest_get_author_posts($author_id = false) {
+	return $GLOBALS['landquest_author']->get_author_posts($author_id);
+}
+
+function landquest_query_author_posts($author_id = false) {
+	return $GLOBALS['landquest_author']->query_author_posts($author_id);
 }

@@ -71,9 +71,11 @@
                                         ?>
                                         <div class="row">
                                             <article id="author-<?php the_ID(); ?>" class="author-item">
-                                                <a href="<?php the_permalink(); ?>" target="_blank" rel="external"><?php the_post_thumbnail('small-thumbnail', array('alt' => get_the_title())); ?></a>
-                                                <h4><a href="<?php the_permalink(); ?>" target="_blank" rel="external"><?php the_title(); ?></a></h4>
-                                                <p class="website"><a href="<?php the_permalink(); ?>" target="_blank" rel="external"><?php the_field('author_url'); ?></a></p>
+                                                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('small-thumbnail', array('alt' => get_the_title())); ?></a>
+                                                <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+												<?php if(get_field('author_url')) : ?>
+													<p class="website"><a href="<?php the_field('author_url'); ?>" target="_blank" rel="external"><?php the_field('author_url'); ?></a></p>
+												<?php endif; ?>
                                                 <?php the_content(); ?>
                                             </article>
                                         </div>
