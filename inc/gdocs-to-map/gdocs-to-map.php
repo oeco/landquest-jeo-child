@@ -84,31 +84,31 @@ class LandQuest_GDocsToMap {
 						'title' => __('OXFAM Rivers', 'landquest'),
 						'icon' => $base_url . '/img/icons/7.png',
 						'popupTemplateHeader' => __('OXFAM River', 'landquest'),
-						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Operational status', 'landquest'), __('Human population served', 'landquest'), __('System management', 'landquest'))
+						'popupTemplateFields' => array( __('Name', 'landquest'), __('Operational status', 'landquest'), __('Human population served', 'landquest'), __('System management', 'landquest'))
 				),
 				'oxfam_rock_catchments' => array(
 						'title' => __('OXFAM Rock Catchments', 'landquest'),
 						'icon' => $base_url . '/img/icons/8.png',
 						'popupTemplateHeader' => __('OXFAM Rock Catchment', 'landquest'),
-						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Reservoir capacity (m3)', 'landquest'))
+						'popupTemplateFields' => array( __('Name', 'landquest'), __('Reservoir capacity (m3)', 'landquest'))
 				),
 				'oxfam_springs' => array(
 						'title' => __('OXFAM Springs', 'landquest'),
 						'icon' => $base_url . '/img/icons/9.png',
 						'popupTemplateHeader' => __('OXFAM Spring', 'landquest'),
-						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Operational status', 'landquest'), __('Human population served', 'landquest'), __('System management', 'landquest'))
+						'popupTemplateFields' => array( __('Name', 'landquest'), __('Operational status', 'landquest'), __('Human population served', 'landquest'), __('System management', 'landquest'))
 				),
 				'oxfam_wells' => array(
 						'title' => __('OXFAM Hand Dug Wells', 'landquest'),
 						'icon' => $base_url . '/img/icons/10.png',
 						'popupTemplateHeader' => __('OXFAM Hand Dug Well', 'landquest'),
-						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Functioning', 'landquest'))
+						'popupTemplateFields' => array( __('Name', 'landquest'), __('Functioning', 'landquest'))
 				),
 				'oxfam_earthpan' => array(
 						'title' => __('OXFAM Earthpan', 'landquest'),
 						'icon' => $base_url . '/img/icons/11.png',
 						'popupTemplateHeader' => __('OXFAM Earthpan', 'landquest'),
-						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Reservoir capacity (LxWxDx2/3) (m3)', 'landquest'))
+						'popupTemplateFields' => array( __('Name', 'landquest'), __('Reservoir capacity (LxWxDx2/3) (m3)', 'landquest'))
 				)
 			)
 		));
