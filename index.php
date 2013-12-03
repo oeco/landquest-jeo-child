@@ -7,6 +7,9 @@ if(is_front_page()) {
 		jeo_featured();
 	else
 		get_template_part('content', 'featured');
+	
+	get_template_part('section', 'slider');
+	
 } else {
 	jeo_featured();
 }

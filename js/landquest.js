@@ -36,3 +36,59 @@ function lockMarkerPopup(map, marker) {
 	});
 
 }
+
+(function($) {
+
+	/*
+	 * Slider
+	 */
+	$(document).ready(function() {
+		
+		var container = $('#lq-slider');
+		
+		var origNav = [];
+		
+		$.each(container.find('.slider-navigation li'), function() {
+			origNav.push($(this).clone());
+		});
+		
+		if(container.length) {
+
+			var options = {
+				horizontal: 1,
+				itemNav: 'basic',
+				itemSelector: container.find('.slider-content > ul > li'),
+				smart: 1,
+				activateOn: 'click',
+				mouseDragging: 0,
+				touchDragging: 1,
+				pagesBar: container.find('.slider-navigation'),
+				pageBuilder: function(index) {
+					return '<li>' + origNav[index].html() + '</li>';
+				},
+				activatePageOn: 'click',
+				releaseSwing: 1,
+				startAt: 0,
+				scrollBy: 0,
+				speed: 300,
+				keyboardNavBy: null,
+				prev: container.find('.slider-arrows .previous'),
+				next: container.find('.slider-arrows .next')
+			};
+			
+			var sly = new Sly(container.find('.slider-content'), options);
+			
+			var fixSizes = function() {
+				container.find('.slider-content > ul > li').width(container.find('.slider-content').width());
+				sly.reload();
+			};
+			
+			$(window).resize(fixSizes).resize();
+			
+			sly.init();
+
+		}
+
+	});
+	
+})(jQuery);
