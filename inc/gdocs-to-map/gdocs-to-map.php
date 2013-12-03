@@ -47,78 +47,68 @@ class LandQuest_GDocsToMap {
 				'flowers' => array(
 						'title' => __('Flowers Councils', 'landquest'),
 						'icon' => $base_url . '/img/icons/1.png',
-						'popupTemplate' => 
-								"<div class='lq-map-legend-item'>" .
-									"<h4>" . __('Flowers Council', 'landquest') . "</h4>" .
-									"<table>".
-										"<tr>" .
-											"<th>". __('Company', 'landquest') ."</th>" .
-											"<td><%= item['" . __('Company', 'landquest') . "'] %></td>".
-										"</tr>" .
-										"<tr>" .
-											"<th>" . __('Place', 'landquest') . "</th>" .
-											"<td><%= item['" . __('Place', 'landquest') . "'] %></td>" .
-										"</tr>" .
-									"</table>" .
-								"</div>"
+						'popupTemplateHeader' => __('Flowers Council', 'landquest'),
+						'popupTemplateFields' => array(__('Company', 'landquest'), __('Place', 'landquest'))
 				),
 				'mow_irrigation' => array(
 						'title' => __('MoW Irrigation Programmes', 'landquest'),
 						'icon' => $base_url . '/img/icons/2.png',
-						'popupTemplate' => 
-								"<div class='lq-map-legend-item'>" .
-									"<h4>" . __('MoW Irrigation Project', 'landquest') . "</h4>" .
-									"<table>".
-										"<tr>" .
-											"<th>". __('Name', 'landquest') ."</th>" .
-											"<td><%= item['" . __('Name', 'landquest') . "'] %></td>".
-										"</tr>" .
-										"<tr>" .
-											"<th>" . __('Irrigation Area', 'landquest') . "</th>" .
-											"<td><%= item['" . __('Irrigation Area', 'landquest') . "'] %></td>" .
-										"</tr>" .
-										"<tr>" .
-											"<th>" . __('Project', 'landquest') . "</th>" .
-											"<td><%= item['" . __('Project', 'landquest') . "'] %></td>" .
-										"</tr>" .
-									"</table>" .
-								"</div>"
+						'popupTemplateHeader' => __('MoW Irrigation Project', 'landquest'),
+						'popupTemplateFields' => array(__('Name', 'landquest'), __('Irrigation Area', 'landquest'), __('Project', 'landquest'))
 				),
 				'mow_boreholes' => array(
 						'title' => __('MoW Boreholes', 'landquest'),
-						'icon' => $base_url . '/img/icons/3.png'
+						'icon' => $base_url . '/img/icons/3.png',
+						'popupTemplateHeader' => __('MoW Boreholes', 'landquest'),
+						'popupTemplateFields' => array( __('Name Of Water Source/Point', 'landquest'), __('Operational status', 'landquest'), __('Human population served', 'landquest'), __('Animal population served', 'landquest'), __('System management', 'landquest'))
 				),
 				'oxfam_sand_dams' => array(
 						'title' => __('OXFAM Sand Dams', 'landquest'),
-						'icon' => $base_url . '/img/icons/4.png'
+						'icon' => $base_url . '/img/icons/4.png',
+						'popupTemplateHeader' => __('OXFAM Sand Dam', 'landquest'),
+						'popupTemplateFields' => array( __('Division', 'landquest'), __('Operational status', 'landquest'), __('Human population served', 'landquest'), __('System management', 'landquest'))
 				),
 				'oxfam_boreholes' => array(
 						'title' => __('OXFAM Boreholes', 'landquest'),
-						'icon' => $base_url . '/img/icons/5.png'
+						'icon' => $base_url . '/img/icons/5.png',
+						'popupTemplateHeader' => __('OXFAM Boreholes', 'landquest'),
+						'popupTemplateFields' => array( __('Name Of Water Point', 'landquest'), __('Number of settlements served', 'landquest'), __('Functioning', 'landquest'), __('System management', 'landquest'))
 				),
 				'oxfam_lakes' => array(
 						'title' => __('OXFAM Lakes', 'landquest'),
-						'icon' => $base_url . '/img/icons/6.png'
+						'icon' => $base_url . '/img/icons/6.png',
+						'popupTemplateHeader' => __('OXFAM Lake', 'landquest'),
+						'popupTemplateFields' => array( __('Division', 'landquest'), __('Name of water source', 'landquest'), __('Operational status', 'landquest'), __('Water quality', 'landquest'), __('Human population served', 'landquest'))
 				),
 				'oxfam_rivers' => array(
 						'title' => __('OXFAM Rivers', 'landquest'),
-						'icon' => $base_url . '/img/icons/7.png'
+						'icon' => $base_url . '/img/icons/7.png',
+						'popupTemplateHeader' => __('OXFAM River', 'landquest'),
+						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Operational status', 'landquest'), __('Human population served', 'landquest'), __('System management', 'landquest'))
 				),
 				'oxfam_rock_catchments' => array(
 						'title' => __('OXFAM Rock Catchments', 'landquest'),
-						'icon' => $base_url . '/img/icons/8.png'
+						'icon' => $base_url . '/img/icons/8.png',
+						'popupTemplateHeader' => __('OXFAM Rock Catchment', 'landquest'),
+						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Reservoir capacity (m3)', 'landquest'))
 				),
 				'oxfam_springs' => array(
 						'title' => __('OXFAM Springs', 'landquest'),
-						'icon' => $base_url . '/img/icons/9.png'
+						'icon' => $base_url . '/img/icons/9.png',
+						'popupTemplateHeader' => __('OXFAM Spring', 'landquest'),
+						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Operational status', 'landquest'), __('Human population served', 'landquest'), __('System management', 'landquest'))
 				),
 				'oxfam_wells' => array(
-						'title' => __('OXFAM Wells', 'landquest'),
-						'icon' => $base_url . '/img/icons/10.png'
+						'title' => __('OXFAM Hand Dug Wells', 'landquest'),
+						'icon' => $base_url . '/img/icons/10.png',
+						'popupTemplateHeader' => __('OXFAM Hand Dug Well', 'landquest'),
+						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Functioning', 'landquest'))
 				),
 				'oxfam_earthpan' => array(
-						'title' => __('OXGFAM Earthpan', 'landquest'),
-						'icon' => $base_url . '/img/icons/11.png'
+						'title' => __('OXFAM Earthpan', 'landquest'),
+						'icon' => $base_url . '/img/icons/11.png',
+						'popupTemplateHeader' => __('OXFAM Earthpan', 'landquest'),
+						'popupTemplateFields' => array( __('Name of water source', 'landquest'), __('Reservoir capacity (LxWxDx2/3) (m3)', 'landquest'))
 				)
 			)
 		));
@@ -152,7 +142,7 @@ class LandQuest_GDocsToMap {
 		foreach($sources as $key => $csv) {
 
 			// uncomment this if you need to fetch from google docs at every access
-			// delete_transient($key);
+			delete_transient($key);
 
 			// fetch transient data
 			$data[$key] = get_transient($key);

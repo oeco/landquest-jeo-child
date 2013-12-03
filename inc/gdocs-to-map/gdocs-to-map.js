@@ -73,20 +73,37 @@
 	
 	function initializePopupTemplatesFunctions(){
 		$.each(layersInfo, function(i, aLayer) {
-			// if a template exists, generate it
-			if (layersInfo[i].popupTemplate) {
-				layersInfo[i].popupTemplateFunction = _.template(layersInfo[i].popupTemplate)
-			// if not, return a warning
-			} else {
-				layersInfo[i].popupTemplateFunction = function() { 
-					return '<div>Missing template for this item!</div>'
-				}
+			var moustacheTemplate = "<div class='lq-map-legend-item'>"
+			
+			// add header to template
+			if (layersInfo[i].popupTemplateHeader) {
+				moustacheTemplate += "<h4>" + layersInfo[i].popupTemplateHeader + "</h4>";
 			}
-    });
+			
+			// add point properties to template
+			if (layersInfo[i].popupTemplateFields) {
+				// open table div
+				moustacheTemplate += "<table>";
+				_.each(layersInfo[i].popupTemplateFields, function(field){
+					moustacheTemplate += 
+						"<tr>" +
+							"<th>" + field + "</th>" +
+							"<td><%= item['" + field + "'] %></td>"+
+						"</tr>";
+				})
+				// closes table
+				moustacheTemplate += "</table>";				
+			}
+			
+			moustacheTemplate += "</div>"
+			
+			console.log(moustacheTemplate);
+			
+			layersInfo[i].popupTemplateFunction = _.template(moustacheTemplate)
+		});
 	}
 	
 	function popupHtml(item) {
-		console.log(layersInfo[item.marker_class].popupTemplateFunction ({item: item}));
 		return layersInfo[item.marker_class].popupTemplateFunction ({item: item});
 	}
 		
@@ -100,8 +117,6 @@
 		});
 		
 		marker._data = m;
-
-
 		
 		marker.on('mouseover', function(e) {
 			if (!e.target.popupLoaded) {
