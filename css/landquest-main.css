@@ -1262,6 +1262,14 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
   padding: 0 10px 10px 0;
   float: left;
 }
+#colophon .credits {
+  font-family: "Galdeano";
+  font-size: 14px;
+  text-align: right;
+}
+#colophon .credits a {
+  color: #fff;
+}
 .single .map-container .map {
   height: 140%;
 }
@@ -1677,6 +1685,13 @@ html#map-embed .map-container .leaflet-control-container .leaflet-top {
   line-height: 50px;
   color: #4a3b1e;
   font-weight: 400;
+}
+#lq-slider .slider-content > ul > li h2 a {
+  color: #4a3b1e;
+  text-decoration: none;
+}
+#lq-slider .slider-content > ul > li h2 a:hover {
+  color: #111;
 }
 #lq-slider .slider-content > ul > li p {
   font-size: 18px;
