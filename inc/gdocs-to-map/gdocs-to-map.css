@@ -121,6 +121,7 @@
 	border-bottom: 1px solid #ede0cd;
 	padding: 10px 0 10px;
 	margin: 0;
+    cursor: pointer;
 }
 .lq-map-legend li:first-child {
 	padding-top: 0;
@@ -134,4 +135,12 @@
 .lq-map-legend li img {
 	float: left;
 	margin: 0 10px 0 0;
+}
+
+.lq-map-legend li.disabled {
+    opacity: .5;
+}
+
+.lq-map-legend li:hover {
+    opacity: .75;
 }

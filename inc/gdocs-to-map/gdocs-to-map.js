@@ -58,14 +58,33 @@
 			});
 			
 			// add layer to legend div
-			legendDiv = legendDiv + "<li class='"+ key +" lq-map-legend-item'>\n"
+			legendDiv = legendDiv + "<li class='" + key + "'>\n"
 						+ "<img src='"+layersInfo[key]['icon']+"'></img>\n"
 						+ "<span>"+layersInfo[key]['title']+"</span>\n";
-			
+
 			layers[key].addTo(map);
+            
+            $('.map-container').on('click', '.' + key, function() {
+                
+                var clicked = $(this).data('layer');
+                if(!clicked) {
+                    clicked = $(this).attr('class');
+                    $(this).data('layer', clicked);
+                }
+
+                if(layers[clicked]._map) {
+                    map.removeLayer(layers[clicked]);
+                    $(this).addClass('disabled');
+                } else {
+                    layers[clicked].addTo(map);
+                    $(this).removeClass('disabled');
+                }
+
+            });
+            
 		}
 		
-		legendDiv = legendDiv + '</div>\n'
+		legendDiv = legendDiv + '</div>\n';
 		
 		map.legendControl.addLegend(legendDiv);
 		
@@ -95,9 +114,7 @@
 				moustacheTemplate += "</table>";				
 			}
 			
-			moustacheTemplate += "</div>"
-			
-			console.log(moustacheTemplate);
+			moustacheTemplate += "</div>";
 			
 			layersInfo[i].popupTemplateFunction = _.template(moustacheTemplate)
 		});
