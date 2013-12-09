@@ -113,7 +113,7 @@
 		var iconUrl = layersInfo[m.marker_class]['icon'];
 		
 		var marker = L.marker([parseFloat(m.latitude), parseFloat(m.longitude)], {
-			icon: L.icon({iconUrl: iconUrl})
+			icon: L.icon({iconUrl: iconUrl, iconSize: [21,21], popupAnchor: [0,-10]})
 		});
 		
 		marker._data = m;
