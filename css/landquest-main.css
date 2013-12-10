@@ -281,7 +281,7 @@ h6 {
 .map-container {
   position: relative;
   z-index: 5;
-  height: 400px;
+  height: 430px;
 }
 .map-container:after {
   content: '';
