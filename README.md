@@ -1,16 +1,9 @@
 
+# LandQuest Kenya JEO Child Theme
 
-## LandQuest Kenya JEO Child Theme
-
-### Requirements
-
-* Wordpress
-* Wordpress qTranslate plugin 
 
 
 ### How to install
-
-#### Themes
 
 This is a child theme of JEO, a Wordpress theme which enables map publishing. 
 
@@ -20,6 +13,13 @@ https://github.com/cardume/jeo
 
 Then, copy this repository (LandQuest) to `wp-content`. You should be able to activate LandQuest theme at admin panel.
 
-#### Plugin setup
+### Setup
 
-After installing qTranslate plugin, go to the advanced settings and check "Use strftime instead of date and replace formats with the predefined formats for each language." for "Date / Time Conversion" option.
+Enable translations:
+
+* Install qTranslate plugin
+* At the advanced settings page, check "Use strftime instead of date and replace formats with the predefined formats for each language." for "Date / Time Conversion" option.
+
+Fetch map data from Google Docs:
+
+* While logged, hit 'Update data from Google Docs' in the top toolbar;
