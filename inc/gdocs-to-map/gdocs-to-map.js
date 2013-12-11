@@ -21,7 +21,7 @@
 		 */
 		
 		for(var key in data) {
-			
+
 			var layerData = $.extend(data[key], []);
 
 			layers[key] = new L.MarkerClusterGroup({
@@ -43,7 +43,9 @@
 			layers[key]._markers = [];
 			
 			$.each(layerData, function(i, m) {
-				
+				if (key == 'spanish_programmes') {
+				  console.log(m)
+			  }
 				if(m.latitude && m.longitude && (typeof m.marker_class !== 'undefined')) {
 					
 					marker = buildMarker(m);

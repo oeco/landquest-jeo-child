@@ -111,6 +111,12 @@ class LandQuest_GDocsToMap {
                     'icon' => $base_url . '/img/icons/11.png',
                     'popupTemplateHeader' => __('OXFAM Earthpan', 'landquest'),
                     'popupTemplateFields' => array( __('Name', 'landquest'), __('Reservoir capacity (LxWxDx2/3) (m3)', 'landquest'))
+                ),
+                'spanish_programmes' => array(
+                    'title' => __('Spanish Cooperation', 'landquest'),
+                    'icon' => $base_url . '/img/icons/11.png',
+                    'popupTemplateHeader' => __('Spanish Cooperation Programme', 'landquest'),
+                    'popupTemplateFields' => array( __('Year', 'landquest'), __('Description', 'landquest'),__('Place', 'landquest'))
                 )
             )
         ));
@@ -130,7 +136,8 @@ class LandQuest_GDocsToMap {
             'oxfam_rock_catchments' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=7&output=csv',
             'oxfam_springs' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=8&output=csv',
             'oxfam_wells' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=9&output=csv',
-            'oxfam_earthpan' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=10&output=csv'
+            'oxfam_earthpan' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=10&output=csv',
+            'spanish_programmes' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=11&output=csv'
         );
     }
     

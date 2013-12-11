@@ -107,6 +107,11 @@
 	background: url(../../img/icons/_11.png);
 }
 
+.landquest-icon.spanish_programmes,
+.landquest-icon.spanish_programmes:after {
+	background: url(../../img/icons/_11.png);
+}
+
 .lq-map-legend {
 	width: 200px;
 }
