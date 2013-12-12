@@ -8,7 +8,7 @@ https://docs.google.com/spreadsheet/ccc?key=0AudTRqkrNLbcdDh2XzdYeEExamFXUnNYN3k
 
 The application is avaliable in English and Spanish, and every column that can be translated has two columns aside refering to these languages. For example, OXFAM Hand Dug Wells has columns titled "Functioning" and "Operativo". Each one describes in English and Spanish if the well is in operation.
 
-The spreadsheet structure (columns titles, order of tabs) shouldn't be changed as this will break translation functionality. Adding new records without changing the sheet layout is fine.
+The spreadsheet structure (columns titles, order of tabs) shouldn't be changed as this will break translation functionality. Adding new lines without changing sheet structure add points to the map.
 
 ### How to install
 
