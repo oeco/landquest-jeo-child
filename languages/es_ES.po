@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LandQuest\n"
-"POT-Creation-Date: 2013-12-10 20:10-0300\n"
-"PO-Revision-Date: 2013-12-10 20:13-0300\n"
+"POT-Creation-Date: 2013-12-15 13:22-0300\n"
+"PO-Revision-Date: 2013-12-15 13:23-0300\n"
 "Last-Translator: Vitor George <vitor.george@gmail.com>\n"
 "Language-Team: OEcoLab\n"
 "Language: es\n"
@@ -83,8 +83,9 @@ msgid "contact"
 msgstr "contacto"
 
 #: ../loop-dataset.php:23 ../single-dataset.php:35
+#, fuzzy
 msgid "Download data"
-msgstr ""
+msgstr "datos y recursos"
 
 #: ../loop-dataset.php:45 ../loop-small.php:19 ../loop.php:27
 msgid "Read more"
@@ -107,12 +108,14 @@ msgid "Share on Facebook"
 msgstr ""
 
 #: ../section-slider.php:49 ../single-dataset.php:57 ../single.php:45
+#, fuzzy
 msgid "Tweet about it"
-msgstr ""
+msgstr "sobre"
 
 #: ../section-slider.php:50 ../single-dataset.php:58 ../single.php:46
+#, fuzzy
 msgid "Share on Google Plus"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../section-slider.php:61
 msgid "Previous"
@@ -177,7 +180,7 @@ msgstr "Autores de LandQuest"
 #: ../inc/author.php:65
 #, fuzzy
 msgid "Author settings"
-msgstr "Autores"
+msgstr "Autor"
 
 #: ../inc/author.php:69
 msgid "Main activity"
@@ -194,12 +197,12 @@ msgstr ""
 #: ../inc/author.php:119 ../inc/author.php:123
 #, fuzzy
 msgid "Post author"
-msgstr "Editar autor"
+msgstr "Autor"
 
 #: ../inc/author.php:135
-#, php-format
+#, fuzzy, php-format
 msgid "<a href=\"%s\" target=\"_blank\">Click here to create a new author</a>"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/dataset.php:22 ../inc/dataset.php:32
 msgid "Datasets"
@@ -269,16 +272,19 @@ msgid "All licenses"
 msgstr ""
 
 #: ../inc/dataset.php:58
+#, fuzzy
 msgid "Edit license"
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/dataset.php:59
+#, fuzzy
 msgid "View license"
-msgstr ""
+msgstr "Exibir autor"
 
 #: ../inc/dataset.php:60
+#, fuzzy
 msgid "Update license"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/dataset.php:61
 #, fuzzy
@@ -286,8 +292,9 @@ msgid "Add new license"
 msgstr "Añadir nuevo autor"
 
 #: ../inc/dataset.php:62
+#, fuzzy
 msgid "New license name"
-msgstr ""
+msgstr "Nombre"
 
 #: ../inc/dataset.php:63
 msgid "Parent license"
@@ -311,12 +318,14 @@ msgid "Separate licenses with commas"
 msgstr ""
 
 #: ../inc/dataset.php:68
+#, fuzzy
 msgid "Add or remove licenses"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/dataset.php:69
+#, fuzzy
 msgid "Choose from most used licenses"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/dataset.php:70
 #, fuzzy
@@ -329,9 +338,10 @@ msgid "Sources"
 msgstr ""
 
 #: ../inc/dataset.php:86
+#, fuzzy
 msgctxt "Source singular name"
 msgid "Source"
-msgstr ""
+msgstr "Nombre de la fuente"
 
 #: ../inc/dataset.php:87
 msgid "All sources"
@@ -350,7 +360,7 @@ msgstr "Exibir autor"
 #: ../inc/dataset.php:90
 #, fuzzy
 msgid "Update source"
-msgstr "datos y recursos"
+msgstr "Nombre de la fuente"
 
 #: ../inc/dataset.php:91
 #, fuzzy
@@ -358,8 +368,9 @@ msgid "Add new source"
 msgstr "Añadir nuevo autor"
 
 #: ../inc/dataset.php:92
+#, fuzzy
 msgid "New source name"
-msgstr ""
+msgstr "Nombre de la fuente"
 
 #: ../inc/dataset.php:93
 #, fuzzy
@@ -367,8 +378,9 @@ msgid "Parent source"
 msgstr "Nombre de la fuente"
 
 #: ../inc/dataset.php:94
+#, fuzzy
 msgid "Parent source:"
-msgstr ""
+msgstr "Nombre de la fuente"
 
 #: ../inc/dataset.php:95
 #, fuzzy
@@ -386,11 +398,12 @@ msgstr ""
 #: ../inc/dataset.php:98
 #, fuzzy
 msgid "Add or remove sources"
-msgstr "datos y recursos"
+msgstr "Añadir autor"
 
 #: ../inc/dataset.php:99
+#, fuzzy
 msgid "Choose from most used sources"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/dataset.php:100
 #, fuzzy
@@ -458,10 +471,11 @@ msgid "This is a creator"
 msgstr ""
 
 #: ../inc/partner.php:86
+#, fuzzy
 msgid ""
 "Check this to add this organization to the list of creators (\"by\" section "
 "on the footer)"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/acf.php:436
 msgid "Field&nbsp;Groups"
@@ -472,32 +486,39 @@ msgid "Advanced Custom Fields"
 msgstr ""
 
 #: ../inc/acf/acf.php:438
+#, fuzzy
 msgid "Add New"
-msgstr ""
+msgstr "Añadir nuevo autor"
 
 #: ../inc/acf/acf.php:439
+#, fuzzy
 msgid "Add New Field Group"
-msgstr ""
+msgstr "Añadir nuevo autor"
 
 #: ../inc/acf/acf.php:440
+#, fuzzy
 msgid "Edit Field Group"
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/acf.php:441
+#, fuzzy
 msgid "New Field Group"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/acf.php:442
+#, fuzzy
 msgid "View Field Group"
-msgstr ""
+msgstr "Exibir autor"
 
 #: ../inc/acf/acf.php:443
+#, fuzzy
 msgid "Search Field Groups"
-msgstr ""
+msgstr "Buscar autor"
 
 #: ../inc/acf/acf.php:444
+#, fuzzy
 msgid "No Field Groups found"
-msgstr ""
+msgstr "Ningún autor encontrado"
 
 #: ../inc/acf/acf.php:445
 #, fuzzy
@@ -509,21 +530,23 @@ msgid "Custom Fields"
 msgstr ""
 
 #: ../inc/acf/acf.php:566 ../inc/acf/acf.php:569
+#, fuzzy
 msgid "Field group updated."
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/acf.php:567
+#, fuzzy
 msgid "Custom field updated."
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/acf.php:568
 msgid "Custom field deleted."
 msgstr ""
 
 #: ../inc/acf/acf.php:571
-#, php-format
+#, fuzzy, php-format
 msgid "Field group restored to revision from %s"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/acf.php:572
 msgid "Field group published."
@@ -542,8 +565,9 @@ msgid "Field group scheduled for."
 msgstr ""
 
 #: ../inc/acf/acf.php:576
+#, fuzzy
 msgid "Field group draft updated."
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/acf.php:711
 msgid "Thumbnail"
@@ -562,12 +586,14 @@ msgid "Full"
 msgstr ""
 
 #: ../inc/acf/core/api.php:1162
+#, fuzzy
 msgid "Update"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/api.php:1163
+#, fuzzy
 msgid "Post updated"
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/actions/export.php:26
 #: ../inc/acf/core/views/meta_box_fields.php:58
@@ -580,8 +606,9 @@ msgstr ""
 
 #: ../inc/acf/core/controllers/addons.php:42
 #: ../inc/acf/core/controllers/field_groups.php:311
+#, fuzzy
 msgid "Add-ons"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/addons.php:130
 #: ../inc/acf/core/controllers/field_groups.php:433
@@ -589,8 +616,9 @@ msgid "Repeater Field"
 msgstr ""
 
 #: ../inc/acf/core/controllers/addons.php:131
+#, fuzzy
 msgid "Create infinite rows of repeatable data with this versatile interface!"
-msgstr ""
+msgstr "datos y recursos"
 
 #: ../inc/acf/core/controllers/addons.php:137
 #: ../inc/acf/core/controllers/field_groups.php:441
@@ -607,8 +635,9 @@ msgid "Options Page"
 msgstr ""
 
 #: ../inc/acf/core/controllers/addons.php:145
+#, fuzzy
 msgid "Create global data to use throughout your website!"
-msgstr ""
+msgstr "datos y recursos"
 
 #: ../inc/acf/core/controllers/addons.php:151
 msgid "Flexible Content Field"
@@ -643,28 +672,33 @@ msgid "Find addresses and coordinates of a desired location"
 msgstr ""
 
 #: ../inc/acf/core/controllers/addons.php:182
+#, fuzzy
 msgid "Contact Form 7 Field"
-msgstr ""
+msgstr "contacto"
 
 #: ../inc/acf/core/controllers/addons.php:183
+#, fuzzy
 msgid "Assign one or more contact form 7 forms to a post"
-msgstr ""
+msgstr "contacto"
 
 #: ../inc/acf/core/controllers/addons.php:193
+#, fuzzy
 msgid "Advanced Custom Fields Add-Ons"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/addons.php:196
+#, fuzzy
 msgid ""
 "The following Add-ons are available to increase the functionality of the "
 "Advanced Custom Fields plugin."
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/addons.php:197
+#, fuzzy
 msgid ""
 "Each Add-on can be installed as a separate plugin (receives updates) or "
 "included in your theme (does not receive updates)."
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/addons.php:219
 #: ../inc/acf/core/controllers/addons.php:240
@@ -724,8 +758,9 @@ msgid ""
 msgstr ""
 
 #: ../inc/acf/core/controllers/export.php:256
+#, fuzzy
 msgid "Select field group(s) from the list and click \"Export XML\""
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/controllers/export.php:257
 msgid "Save the .xml file when prompted"
@@ -764,16 +799,18 @@ msgstr ""
 
 #: ../inc/acf/core/controllers/export.php:270
 #: ../inc/acf/core/controllers/export.php:311
+#, fuzzy
 msgid ""
 "Please note that if you export and register field groups within the same WP, "
 "you will see duplicate fields on your edit screens. To fix this, please move "
 "the original field group to the trash or remove the code from your functions."
 "php file."
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/controllers/export.php:272
+#, fuzzy
 msgid "Select field group(s) from the list and click \"Create PHP\""
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/controllers/export.php:273
 #: ../inc/acf/core/controllers/export.php:302
@@ -787,8 +824,9 @@ msgstr ""
 
 #: ../inc/acf/core/controllers/export.php:275
 #: ../inc/acf/core/controllers/export.php:304
+#, fuzzy
 msgid "To activate any Add-ons, edit and use the code in the first few lines."
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/controllers/export.php:295
 msgid "Export Field Groups to PHP"
@@ -808,18 +846,20 @@ msgid "Include in theme"
 msgstr ""
 
 #: ../inc/acf/core/controllers/export.php:317
+#, fuzzy
 msgid ""
 "The Advanced Custom Fields plugin can be included within a theme. To do so, "
 "move the ACF plugin inside your theme and add the following code to your "
 "functions.php file:"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/export.php:323
+#, fuzzy
 msgid ""
 "To remove all visual interfaces from the ACF plugin, you can use a constant "
 "to enable lite mode. Add the following code to your functions.php file "
 "<b>before</b> the include_once code:"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/export.php:331
 msgid "Back to export"
@@ -830,8 +870,9 @@ msgid "No field groups were selected"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_group.php:358
+#, fuzzy
 msgid "Move to trash. Are you sure?"
-msgstr ""
+msgstr "Ningún autor encontrado en el basurero"
 
 #: ../inc/acf/core/controllers/field_group.php:359
 msgid "checked"
@@ -875,7 +916,6 @@ msgid "Hide / Show All"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_group.php:396
-#: ../inc/gdocs-to-map/gdocs-to-map.php:119
 msgid "Location"
 msgstr ""
 
@@ -926,12 +966,14 @@ msgid "Top Level Page (parent of 0)"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_group.php:648
+#, fuzzy
 msgid "Parent Page (has children)"
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_group.php:649
+#, fuzzy
 msgid "Child Page (has parent)"
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_group.php:657
 msgid "Default Template"
@@ -962,8 +1004,9 @@ msgid "Revision"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_group.php:740
+#, fuzzy
 msgid "Trash"
-msgstr ""
+msgstr "Ningún autor encontrado en el basurero"
 
 #: ../inc/acf/core/controllers/field_group.php:753
 msgid "Super Admin"
@@ -992,16 +1035,18 @@ msgid "Changelog"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:217
+#, fuzzy
 msgid "See what's new in"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:217
 msgid "version"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:219
+#, fuzzy
 msgid "Resources"
-msgstr ""
+msgstr "datos y recursos"
 
 #: ../inc/acf/core/controllers/field_groups.php:221
 msgid "Getting Started"
@@ -1053,53 +1098,62 @@ msgid "Thank you for updating to the latest version!"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:249
+#, fuzzy
 msgid "is more polished and enjoyable than ever before. We hope you like it."
-msgstr ""
+msgstr "Leer más"
 
 #: ../inc/acf/core/controllers/field_groups.php:256
+#, fuzzy
 msgid "What's New"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:259
+#, fuzzy
 msgid "Download Add-ons"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:313
 msgid "Activation codes have grown into plugins!"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:314
+#, fuzzy
 msgid ""
 "Add-ons are now activated by downloading and installing individual plugins. "
 "Although these plugins will not be hosted on the wordpress.org repository, "
 "each Add-on will continue to receive updates in the usual way."
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:320
+#, fuzzy
 msgid "All previous Add-ons have been successfully installed"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:324
+#, fuzzy
 msgid "This website uses premium Add-ons which need to be downloaded"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:324
+#, fuzzy
 msgid "Download your activated Add-ons"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:329
+#, fuzzy
 msgid ""
 "This website does not use premium Add-ons and will not be affected by this "
 "change."
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:339
 msgid "Easier Development"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:341
+#, fuzzy
 msgid "New Field Types"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:343
 msgid "Taxonomy Field"
@@ -1122,10 +1176,11 @@ msgid "Custom Field Types"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:349
+#, fuzzy
 msgid ""
 "Creating your own field type has never been easier! Unfortunately, version 3 "
 "field types are not compatible with version 4."
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_groups.php:350
 msgid "Migrating your field types is easy, please"
@@ -1151,20 +1206,23 @@ msgid ""
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:353
+#, fuzzy
 msgid "read this guide"
-msgstr ""
+msgstr "Leer más"
 
 #: ../inc/acf/core/controllers/field_groups.php:353
+#, fuzzy
 msgid "to find the updated naming convention."
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_groups.php:355
 msgid "Preview draft is now working!"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:356
+#, fuzzy
 msgid "This bug has been squashed along with many other little critters!"
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_groups.php:356
 msgid "See the full changelog"
@@ -1179,40 +1237,45 @@ msgid "Database Changes"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:363
+#, fuzzy
 msgid ""
 "Absolutely <strong>no</strong> changes have been made to the database "
 "between versions 3 and 4. This means you can roll back to version 3 without "
 "any issues."
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_groups.php:365
 msgid "Potential Issues"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:366
+#, fuzzy
 msgid ""
 "Do to the sizable changes surounding Add-ons, field types and action/"
 "filters, your website may not operate correctly. It is important that you "
 "read the full"
-msgstr ""
+msgstr "Leer más"
 
 #: ../inc/acf/core/controllers/field_groups.php:366
+#, fuzzy
 msgid "Migrating from v3 to v4"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/controllers/field_groups.php:366
+#, fuzzy
 msgid "guide to view the full list of changes."
-msgstr ""
+msgstr "Exibir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:369
 msgid "Really Important!"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:369
+#, fuzzy
 msgid ""
 "If you updated the ACF plugin without prior knowledge of such changes, "
 "please roll back to the latest"
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_groups.php:369
 msgid "version 3"
@@ -1227,14 +1290,16 @@ msgid "Thank You"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:375
+#, fuzzy
 msgid ""
 "A <strong>BIG</strong> thank you to everyone who has helped test the version "
 "4 beta and for all the support I have received."
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_groups.php:376
+#, fuzzy
 msgid "Without you all, this release would not have been possible!"
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_groups.php:380
 msgid "Changelog for"
@@ -1250,25 +1315,29 @@ msgid "Overview"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:405
+#, fuzzy
 msgid ""
 "Previously, all Add-ons were unlocked via an activation code (purchased from "
 "the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which "
 "need to be individually downloaded, installed and updated."
-msgstr ""
+msgstr "Añadir nuevo autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:407
+#, fuzzy
 msgid ""
 "This page will assist you in downloading and installing each available Add-"
 "on."
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:409
+#, fuzzy
 msgid "Available Add-ons"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:411
+#, fuzzy
 msgid "The following Add-ons have been detected as activated on this website."
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:424
 #: ../inc/contact/contact.php:58 ../inc/gdocs-to-map/gdocs-to-map.php:59
@@ -1293,34 +1362,40 @@ msgid "Installation"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:469
+#, fuzzy
 msgid "For each Add-on available, please perform the following:"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:471
+#, fuzzy
 msgid "Download the Add-on plugin (.zip file) to your desktop"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:472
 msgid "Navigate to"
 msgstr ""
 
 #: ../inc/acf/core/controllers/field_groups.php:472
+#, fuzzy
 msgid "Plugins > Add New > Upload"
-msgstr ""
+msgstr "Añadir nuevo autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:473
+#, fuzzy
 msgid "Use the uploader to browse, select and install your Add-on (.zip file)"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:474
+#, fuzzy
 msgid ""
 "Once the plugin has been uploaded and installed, click the 'Activate Plugin' "
 "link"
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/controllers/field_groups.php:475
+#, fuzzy
 msgid "The Add-on is now installed and activated!"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/controllers/field_groups.php:489
 msgid "Awesome. Let's get to work"
@@ -1335,16 +1410,18 @@ msgid "Collapse Details"
 msgstr ""
 
 #: ../inc/acf/core/controllers/input.php:67
+#, fuzzy
 msgid "Validation Failed. One or more fields below are required."
-msgstr ""
+msgstr "Leer más"
 
 #: ../inc/acf/core/controllers/upgrade.php:86
 msgid "Upgrade"
 msgstr ""
 
 #: ../inc/acf/core/controllers/upgrade.php:139
+#, fuzzy
 msgid "What's new"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/core/controllers/upgrade.php:150
 msgid "credits"
@@ -1359,8 +1436,9 @@ msgid "Modifying field option 'taxonomy'"
 msgstr ""
 
 #: ../inc/acf/core/controllers/upgrade.php:835
+#, fuzzy
 msgid "Moving user custom fields from wp_options to wp_usermeta'"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/fields/_base.php:124
 #: ../inc/acf/core/views/meta_box_location.php:74
@@ -1385,13 +1463,15 @@ msgstr ""
 
 #: ../inc/acf/core/fields/checkbox.php:147
 #: ../inc/acf/core/fields/select.php:178
+#, fuzzy
 msgid "Enter each choice on a new line."
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/core/fields/checkbox.php:148
 #: ../inc/acf/core/fields/select.php:179
+#, fuzzy
 msgid "For more control, you may specify both a value and label like this:"
-msgstr ""
+msgstr "Leer más"
 
 #: ../inc/acf/core/fields/checkbox.php:149
 #: ../inc/acf/core/fields/radio.php:153 ../inc/acf/core/fields/select.php:180
@@ -1415,8 +1495,9 @@ msgstr ""
 
 #: ../inc/acf/core/fields/checkbox.php:167
 #: ../inc/acf/core/fields/select.php:198
+#, fuzzy
 msgid "Enter each default value on a new line"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/core/fields/checkbox.php:183
 #: ../inc/acf/core/fields/message.php:20 ../inc/acf/core/fields/radio.php:212
@@ -1455,8 +1536,9 @@ msgstr ""
 #: ../inc/acf/core/fields/email.php:107 ../inc/acf/core/fields/number.php:117
 #: ../inc/acf/core/fields/text.php:117 ../inc/acf/core/fields/textarea.php:97
 #: ../inc/acf/core/fields/wysiwyg.php:199
+#, fuzzy
 msgid "Appears when creating a new post"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/core/fields/email.php:123 ../inc/acf/core/fields/number.php:133
 #: ../inc/acf/core/fields/password.php:105 ../inc/acf/core/fields/text.php:131
@@ -1504,12 +1586,14 @@ msgid "Select File"
 msgstr ""
 
 #: ../inc/acf/core/fields/file.php:27
+#, fuzzy
 msgid "Edit File"
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/fields/file.php:28
+#, fuzzy
 msgid "Update File"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/fields/file.php:29 ../inc/acf/core/fields/image.php:30
 msgid "uploaded to this post"
@@ -1520,8 +1604,9 @@ msgid "No File Selected"
 msgstr ""
 
 #: ../inc/acf/core/fields/file.php:123
+#, fuzzy
 msgid "Add File"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/fields/file.php:153 ../inc/acf/core/fields/image.php:118
 #: ../inc/acf/core/fields/taxonomy.php:367
@@ -1549,8 +1634,9 @@ msgid "Uploaded to post"
 msgstr ""
 
 #: ../inc/acf/core/fields/google-map.php:18
+#, fuzzy
 msgid "Google Map"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/fields/google-map.php:31
 msgid "Locating"
@@ -1569,8 +1655,9 @@ msgid "Find current location"
 msgstr ""
 
 #: ../inc/acf/core/fields/google-map.php:123
+#, fuzzy
 msgid "Search for address..."
-msgstr ""
+msgstr "Buscar autor"
 
 #: ../inc/acf/core/fields/google-map.php:159
 msgid "Center"
@@ -1597,12 +1684,14 @@ msgid "Select Image"
 msgstr ""
 
 #: ../inc/acf/core/fields/image.php:28
+#, fuzzy
 msgid "Edit Image"
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/fields/image.php:29
+#, fuzzy
 msgid "Update Image"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/fields/image.php:83
 msgid "Remove"
@@ -1610,16 +1699,18 @@ msgstr ""
 
 #: ../inc/acf/core/fields/image.php:84
 #: ../inc/acf/core/views/meta_box_fields.php:108
+#, fuzzy
 msgid "Edit"
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/fields/image.php:90
 msgid "No image selected"
 msgstr ""
 
 #: ../inc/acf/core/fields/image.php:90
+#, fuzzy
 msgid "Add Image"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/fields/image.php:119
 #: ../inc/acf/core/fields/relationship.php:570
@@ -1643,8 +1734,9 @@ msgid "Preview Size"
 msgstr ""
 
 #: ../inc/acf/core/fields/image.php:140
+#, fuzzy
 msgid "Shown when entering data"
-msgstr ""
+msgstr "datos y recursos"
 
 #: ../inc/acf/core/fields/image.php:159
 msgid "Limit the media library choice"
@@ -1664,8 +1756,9 @@ msgid "Please note that all text will first be passed through the wp function "
 msgstr ""
 
 #: ../inc/acf/core/fields/number.php:19
+#, fuzzy
 msgid "Number"
-msgstr ""
+msgstr "Numero de comunidades abastecidas"
 
 #: ../inc/acf/core/fields/number.php:178
 msgid "Minimum Value"
@@ -1722,8 +1815,9 @@ msgstr "Proyecto"
 
 #: ../inc/acf/core/fields/post_object.php:292
 #: ../inc/acf/core/fields/relationship.php:613
+#, fuzzy
 msgid "Filter from Taxonomy"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/fields/radio.php:18
 msgid "Radio Button"
@@ -1747,8 +1841,9 @@ msgid "Blue"
 msgstr ""
 
 #: ../inc/acf/core/fields/radio.php:175
+#, fuzzy
 msgid "Add 'other' choice to allow for custom values"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/fields/radio.php:187
 msgid "Save 'other' values to the field's choices"
@@ -1763,8 +1858,9 @@ msgid "Maximum values reached ( {max} values )"
 msgstr ""
 
 #: ../inc/acf/core/fields/relationship.php:425
+#, fuzzy
 msgid "Search..."
-msgstr ""
+msgstr "Buscar autor"
 
 #: ../inc/acf/core/fields/relationship.php:436
 msgid "Filter by post type"
@@ -1823,10 +1919,11 @@ msgid "Tab"
 msgstr ""
 
 #: ../inc/acf/core/fields/tab.php:68
+#, fuzzy
 msgid ""
 "Use \"Tab Fields\" to better organize your edit screen by grouping your "
 "fields together under separate tab headings."
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/fields/tab.php:69
 msgid ""
@@ -1875,9 +1972,10 @@ msgid "Load & Save Terms to Post"
 msgstr ""
 
 #: ../inc/acf/core/fields/taxonomy.php:360
+#, fuzzy
 msgid ""
 "Load value based on the post's terms and update the post's terms on save"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/fields/taxonomy.php:377
 msgid "Term Object"
@@ -1916,12 +2014,14 @@ msgid "Leave blank for no limit"
 msgstr ""
 
 #: ../inc/acf/core/fields/textarea.php:19
+#, fuzzy
 msgid "Text Area"
-msgstr ""
+msgstr "Área Irrigada"
 
 #: ../inc/acf/core/fields/textarea.php:152
+#, fuzzy
 msgid "Convert new lines into &lt;br /&gt; tags"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/core/fields/true_false.php:19
 msgid "True / False"
@@ -1979,8 +2079,9 @@ msgid ""
 msgstr ""
 
 #: ../inc/acf/core/fields/date_picker/date_picker.php:128
+#, fuzzy
 msgid "\"yymmdd\" is the most versatile save format. Read more about"
-msgstr ""
+msgstr "Leer más"
 
 #: ../inc/acf/core/fields/date_picker/date_picker.php:128
 #: ../inc/acf/core/fields/date_picker/date_picker.php:144
@@ -1996,18 +2097,20 @@ msgid "This format will be seen by the user when entering a value"
 msgstr ""
 
 #: ../inc/acf/core/fields/date_picker/date_picker.php:144
+#, fuzzy
 msgid ""
 "\"dd/mm/yy\" or \"mm/dd/yy\" are the most used display formats. Read more "
 "about"
-msgstr ""
+msgstr "Leer más"
 
 #: ../inc/acf/core/fields/date_picker/date_picker.php:158
 msgid "Week Starts On"
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_fields.php:24
+#, fuzzy
 msgid "New Field"
-msgstr ""
+msgstr "Nuevo autor"
 
 #: ../inc/acf/core/views/meta_box_fields.php:58
 msgid "Field type does not exist"
@@ -2024,31 +2127,36 @@ msgstr ""
 
 #: ../inc/acf/core/views/meta_box_fields.php:76
 #: ../inc/acf/core/views/meta_box_fields.php:143
+#, fuzzy
 msgid "Field Name"
-msgstr ""
+msgstr "Nombre"
 
 #: ../inc/acf/core/views/meta_box_fields.php:78
 msgid "Field Key"
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_fields.php:90
+#, fuzzy
 msgid ""
 "No fields. Click the <strong>+ Add Field</strong> button to create your "
 "first field."
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/acf/core/views/meta_box_fields.php:105
 #: ../inc/acf/core/views/meta_box_fields.php:108
+#, fuzzy
 msgid "Edit this Field"
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/views/meta_box_fields.php:109
+#, fuzzy
 msgid "Read documentation for this field"
-msgstr ""
+msgstr "Leer más"
 
 #: ../inc/acf/core/views/meta_box_fields.php:109
+#, fuzzy
 msgid "Docs"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/views/meta_box_fields.php:110
 msgid "Duplicate this Field"
@@ -2067,8 +2175,9 @@ msgid "Delete"
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_fields.php:128
+#, fuzzy
 msgid "This is the name which will appear on the EDIT page"
-msgstr ""
+msgstr "Nombre"
 
 #: ../inc/acf/core/views/meta_box_fields.php:144
 msgid "Single word, no spaces. Underscores and dashes allowed"
@@ -2079,8 +2188,9 @@ msgid "Field Instructions"
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_fields.php:174
+#, fuzzy
 msgid "Instructions for authors. Shown when submitting data"
-msgstr ""
+msgstr "Autores"
 
 #: ../inc/acf/core/views/meta_box_fields.php:186
 msgid "Required?"
@@ -2126,18 +2236,20 @@ msgid "Drag and drop to reorder"
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_fields.php:317
+#, fuzzy
 msgid "+ Add Field"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/views/meta_box_location.php:48
 msgid "Rules"
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_location.php:49
+#, fuzzy
 msgid ""
 "Create a set of rules to determine which edit screens will use these "
 "advanced custom fields"
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/views/meta_box_location.php:60
 msgid "Show this field group if"
@@ -2178,8 +2290,9 @@ msgid "Post Format"
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_location.php:88
+#, fuzzy
 msgid "Post Status"
-msgstr ""
+msgstr "Estado operacional"
 
 #: ../inc/acf/core/views/meta_box_location.php:89
 msgid "Post Taxonomy"
@@ -2198,16 +2311,18 @@ msgid "and"
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_location.php:161
+#, fuzzy
 msgid "Add rule group"
-msgstr ""
+msgstr "Añadir autor"
 
 #: ../inc/acf/core/views/meta_box_options.php:25
 msgid "Order No."
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_options.php:26
+#, fuzzy
 msgid "Field groups are created in order <br />from lowest to highest"
-msgstr ""
+msgstr "Actualizar datos desde Google Docs"
 
 #: ../inc/acf/core/views/meta_box_options.php:42
 msgid "Position"
@@ -2242,14 +2357,16 @@ msgid "Hide on screen"
 msgstr ""
 
 #: ../inc/acf/core/views/meta_box_options.php:85
+#, fuzzy
 msgid "<b>Select</b> items to <b>hide</b> them from the edit screen"
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/views/meta_box_options.php:86
+#, fuzzy
 msgid ""
 "If multiple field groups appear on an edit screen, the first field group's "
 "options will be used. (the one with the lowest order number)"
-msgstr ""
+msgstr "Editar autor"
 
 #: ../inc/acf/core/views/meta_box_options.php:96
 msgid "Content Editor"
@@ -2304,8 +2421,9 @@ msgid "Send"
 msgstr ""
 
 #: ../inc/contact/contact.php:82
+#, fuzzy
 msgid "Our system is not accepting email forms for now."
-msgstr ""
+msgstr "Gestión del sistema"
 
 #: ../inc/contact/contact.php:85
 msgid "Security check."
@@ -2320,10 +2438,11 @@ msgid "Invalid email."
 msgstr ""
 
 #: ../inc/contact/contact.php:98
+#, fuzzy
 msgid ""
 "Thank you! Your message has been sent, we'll get back to you as soon as "
 "possible."
-msgstr ""
+msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:50
 msgid "Flowers Councils"
@@ -2338,6 +2457,7 @@ msgid "Company"
 msgstr "Companía"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:53
+#: ../inc/gdocs-to-map/gdocs-to-map.php:119
 msgid "Place"
 msgstr "Localidad"
 
@@ -2433,7 +2553,7 @@ msgstr "OXFAM Lago"
 #: ../inc/gdocs-to-map/gdocs-to-map.php:82
 #, fuzzy
 msgid "OXFAM Lake"
-msgstr "OXFAM Lago"
+msgstr "OXFAM Perforaciones"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:83
 #, fuzzy
@@ -2451,7 +2571,7 @@ msgstr "OXFAM Ríos"
 #: ../inc/gdocs-to-map/gdocs-to-map.php:88
 #, fuzzy
 msgid "OXFAM River"
-msgstr "OXFAM Ríos"
+msgstr "OXFAM Perforaciones"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:92
 msgid "OXFAM Rock Catchments"
@@ -2472,7 +2592,7 @@ msgstr "OXFAM Manantiales"
 #: ../inc/gdocs-to-map/gdocs-to-map.php:100
 #, fuzzy
 msgid "OXFAM Spring"
-msgstr "OXFAM Manantiales"
+msgstr "OXFAM Perforaciones"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:104
 msgid "OXFAM Hand Dug Wells"
@@ -2484,8 +2604,9 @@ msgstr "OXFAM Pozos"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:110
 #: ../inc/gdocs-to-map/gdocs-to-map.php:112
+#, fuzzy
 msgid "OXFAM Earthpan"
-msgstr ""
+msgstr "OXFAM Perforaciones"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:113
 msgid "Reservoir capacity (LxWxDx2/3) (m3)"
@@ -2493,7 +2614,7 @@ msgstr "Capacidad del embalse (LxWxDx2/3) (m3)"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:116
 #, fuzzy
-msgid "Spanish Cooperation Programmes"
+msgid "Spanish Cooperation"
 msgstr "Programa de Irrigación de MoW"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:118
@@ -2506,13 +2627,25 @@ msgid "Year"
 msgstr "Año"
 
 #: ../inc/gdocs-to-map/gdocs-to-map.php:119
+msgid "NGO"
+msgstr "ONG"
+
+#: ../inc/gdocs-to-map/gdocs-to-map.php:119
 msgid "Description"
 msgstr "Descripción"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:217
+#: ../inc/gdocs-to-map/gdocs-to-map.php:119
+msgid "Budget"
+msgstr "Presupuesto"
+
+#: ../inc/gdocs-to-map/gdocs-to-map.php:218
 msgid "Update data from Google Docs"
 msgstr "Actualizar datos desde Google Docs"
 
-#: ../inc/gdocs-to-map/gdocs-to-map.php:233
+#: ../inc/gdocs-to-map/gdocs-to-map.php:234
 msgid "<strong>Google Data has been updated.</strong>"
 msgstr "<strong>Datos desde Google Docs obtenidos con sucesso.</strong>"
+
+#, fuzzy
+#~ msgid "Spanish Cooperation Programmes"
+#~ msgstr "Programa de Irrigación de MoW"

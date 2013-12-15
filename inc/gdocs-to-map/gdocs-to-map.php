@@ -116,7 +116,7 @@ class LandQuest_GDocsToMap {
                     'title' => __('Spanish Cooperation', 'landquest'),
                     'icon' => $base_url . '/img/icons/11.png',
                     'popupTemplateHeader' => __('Spanish Cooperation Programme', 'landquest'),
-                    'popupTemplateFields' => array( __('Year', 'landquest'), __('Description', 'landquest'),__('Place', 'landquest'))
+                    'popupTemplateFields' => array( __('Year', 'landquest'), __('NGO', 'landquest'),  __('Description', 'landquest'), __('Budget', 'landquest'), __('Place', 'landquest'))
                 )
             )
         ));
@@ -137,7 +137,7 @@ class LandQuest_GDocsToMap {
             'oxfam_springs' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=8&output=csv',
             'oxfam_wells' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=9&output=csv',
             'oxfam_earthpan' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=10&output=csv',
-            'spanish_programmes' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=11&output=csv'
+            'spanish_programmes' => 'https://docs.google.com/spreadsheet/pub?key='.$this->gdocs_key.'&single=true&gid=15&output=csv'
         );
     }
     
