@@ -15,14 +15,14 @@
 		initializePopupTemplatesFunctions();
 
 		// Open legend div
-		legendDiv = "<div class='lq-map-legend'>\n<ul>\n"
+		var legendDiv = "<div class='lq-map-legend'><ul>";
 
 		for(var category in layersCategories){
 
 			// add category to legend
-			legendDiv = legendDiv + "<li class='" + category + "'>\n"
-				+ "<img src='"+layersCategories[category].icon+"'></img>\n"
-				+ "<span>"+layersCategories[category].title+"</span>\n";
+			legendDiv += "<li class='" + category + "'>"
+				+ "<img src='"+layersCategories[category].icon+"'></img>"
+				+ "<span>"+layersCategories[category].title+"</span></li>";
 
 			// get child layers
 			var child_layers = layersCategories[category]['layers']
@@ -73,6 +73,8 @@
 
 			// add layer to map
 			layers[category].addTo(map);
+
+
 	        
 			// create legend interaction to this layer
             $('.map-container').on('click', '.' + category, function() {
@@ -95,8 +97,8 @@
 
 		}
 		
-		legendDiv = legendDiv + '</div>\n';
-	
+		legendDiv += '</ul></div>';
+
 		map.legendControl.addLegend(legendDiv);
 		
 	});
