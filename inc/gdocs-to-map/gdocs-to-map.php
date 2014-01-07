@@ -45,13 +45,25 @@ class LandQuest_GDocsToMap {
             'data' => $this->get_data(),
             'base_url' => get_stylesheet_directory_uri(),
             'language' => $this->getLanguage(),
-            'layersInfo' => array(
-                'flowers' => array(
-                    'title' => __('Flowers Councils', 'landquest'),
-                    'icon' => $base_url . '/img/icons/1.png',
-                    'popupTemplateHeader' => __('Flowers Council', 'landquest'),
-                    'popupTemplateFields' => array(__('Company', 'landquest'), __('Place', 'landquest'))
+            'layersCategories' => array( 
+                'water' => array(
+                    'title' => __('AID - Water'),
+                    'icon' => $base_url . '/img/icons/11.png',
+                    'layers' => array('mow_irrigation', 'mow_boreholes', 'oxfam_sand_dams', 'oxfam_boreholes', 'oxfam_lakes', 'oxfam_rivers', 'oxfam_rock_catchments', 'oxfam_springs', 'oxfam_wells', 'oxfam_earthpan')
                 ),
+                'aid_development' => array(
+                    'title' => __('AID - Development'),
+                    'icon' => $base_url . '/img/icons/2.png',
+                    'layers' => array('spanish_programmes')
+                ),
+                'aid_private_sector' => array(
+                    'title' => __('Private Sector'),
+                    'icon' => $base_url . '/img/icons/1.png',
+                    'layers' => array('flowers')
+                )
+            ),
+            'layersInfo' => array(
+                // Water layers
                 'mow_irrigation' => array(
                     'title' => __('MoW Irrigation Programmes', 'landquest'),
                     'icon' => $base_url . '/img/icons/2.png',
@@ -112,11 +124,19 @@ class LandQuest_GDocsToMap {
                     'popupTemplateHeader' => __('OXFAM Earthpan', 'landquest'),
                     'popupTemplateFields' => array( __('Name', 'landquest'), __('Reservoir capacity (LxWxDx2/3) (m3)', 'landquest'))
                 ),
+                // Development layers=
                 'spanish_programmes' => array(
                     'title' => __('Spanish Cooperation', 'landquest'),
-                    'icon' => $base_url . '/img/icons/11.png',
+                    'icon' => $base_url . '/img/icons/2.png',
                     'popupTemplateHeader' => __('Spanish Cooperation Programme', 'landquest'),
                     'popupTemplateFields' => array( __('Year', 'landquest'), __('NGO', 'landquest'),  __('Description', 'landquest'), __('Budget', 'landquest'), __('Place', 'landquest'))
+                ),
+                // Private sector layer
+                'flowers' => array(
+                    'title' => __('Flowers Councils', 'landquest'),
+                    'icon' => $base_url . '/img/icons/1.png',
+                    'popupTemplateHeader' => __('Flowers Council', 'landquest'),
+                    'popupTemplateFields' => array(__('Company', 'landquest'), __('Place', 'landquest'))
                 )
             )
         ));

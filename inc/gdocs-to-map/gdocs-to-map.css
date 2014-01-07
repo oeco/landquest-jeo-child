@@ -52,6 +52,25 @@
 	display: block;
 }
 
+/* makercluster icons */
+
+.landquest-icon.water,
+.landquest-icon.water:after {
+	background: url(../../img/icons/_11.png);
+}
+
+.landquest-icon.aid_development,
+.landquest-icon.aid_development:after {
+	background: url(../../img/icons/_2.png);
+}
+
+.landquest-icon.aid_private_sector,
+.landquest-icon.aid_private_sector:after {
+	background: url(../../img/icons/_1.png);
+}
+
+/* layers icons */
+
 .landquest-icon.flowers,
 .landquest-icon.flowers:after {
 	background: url(../../img/icons/_1.png);

@@ -5,26 +5,30 @@
 		baseUrl = landquest.base_url,
 		language = landquest.language,
 		layersInfo = landquest.layersInfo,
+		layersCategories = landquest.layersCategories,
 		layers = {};
 	
 	jeo.mapReady(function(m) {
 		
 		map = m;
 		
-		// div to be used in Map Legend Control
-		legendDiv = "<div class='lq-map-legend'>\n<ul>\n"
-		
 		initializePopupTemplatesFunctions();
-		
-		/*
-		 * Layers
-		 */
-		
-		for(var key in data) {
 
-			var layerData = $.extend(data[key], []);
+		// Open legend div
+		legendDiv = "<div class='lq-map-legend'>\n<ul>\n"
 
-			layers[key] = new L.MarkerClusterGroup({
+		for(var category in layersCategories){
+
+			// add category to legend
+			legendDiv = legendDiv + "<li class='" + category + "'>\n"
+				+ "<img src='"+layersCategories[category].icon+"'></img>\n"
+				+ "<span>"+layersCategories[category].title+"</span>\n";
+
+			// get child layers
+			var child_layers = layersCategories[category]['layers']
+
+			// create marker cluster group
+			layers[category] = new L.MarkerClusterGroup({
 				iconCreateFunction: function(cluster) {
 					return new L.DivIcon({
 						html: '<span>' + cluster._group._markerClusterTitle + ': '
@@ -34,41 +38,46 @@
 					});
 				}
 			});
-			
-			// set info needed by marker cluster
-			layers[key]._markerClusterTitle = layersInfo[key]['title'];
-			layers[key]._key = key;
-						
-			layers[key]._data = layerData;
-			layers[key]._markers = [];
-			
-			$.each(layerData, function(i, m) {
-				if (key == 'spanish_programmes') {
-				  console.log(m)
-			  }
-				if(m.latitude && m.longitude && (typeof m.marker_class !== 'undefined')) {
-					
-					marker = buildMarker(m);
-					
-					m._marker = marker;
-					
-					layers[key]._markers.push(marker);
-					
-					marker.addTo(layers[key]);
-					
-				}
-			});
-			
-			// add layer to legend div
-			legendDiv = legendDiv + "<li class='" + key + "'>\n"
-						+ "<img src='"+layersInfo[key]['icon']+"'></img>\n"
-						+ "<span>"+layersInfo[key]['title']+"</span>\n";
 
-			layers[key].addTo(map);
-            
-            $('.map-container').on('click', '.' + key, function() {
-                
+			// set info needed by marker cluster
+			layers[category]._markerClusterTitle = layersCategories[category].title;
+			layers[category]._key = category;						
+			layers[category]._markers = [];
+
+
+			// adds child layer data to marker cluster group
+			for (var i=0; i < child_layers.length; i++) {
+
+				// get layer id
+				var layer_id = child_layers[i];
+				
+				// get layer data
+				var layerData = $.extend(data[layer_id], []);
+
+				// load data				
+				$.each(layerData, function(i, m) {
+					if(m.latitude && m.longitude && (typeof m.marker_class !== 'undefined')) {
+						
+						marker = buildMarker(m);
+						
+						m._marker = marker;
+						
+						layers[category]._markers.push(marker);
+						
+						marker.addTo(layers[category]);
+						
+					}
+				});
+
+			}
+
+			// add layer to map
+			layers[category].addTo(map);
+	        
+			// create legend interaction to this layer
+            $('.map-container').on('click', '.' + category, function() {
                 var clicked = $(this).data('layer');
+
                 if(!clicked) {
                     clicked = $(this).attr('class');
                     $(this).data('layer', clicked);
@@ -83,11 +92,11 @@
                 }
 
             });
-            
+
 		}
 		
 		legendDiv = legendDiv + '</div>\n';
-		
+	
 		map.legendControl.addLegend(legendDiv);
 		
 	});
@@ -151,12 +160,7 @@
 			e.target.setZIndexOffset(e.target.previousOffset);
 			e.target.closePopup();
 		});
-		marker.on('click', function(e) {
-			markers.openMarker(e.target, false);
-			return false;
-		});
-		
-		
+			
 		return marker;
 		
 	}
