@@ -47,17 +47,17 @@ class LandQuest_GDocsToMap {
             'language' => $this->getLanguage(),
             'layersCategories' => array( 
                 'water' => array(
-                    'title' => __('AID - Water'),
+                    'title' => __('AID - Water', 'landquest'),
                     'icon' => $base_url . '/img/icons/11.png',
                     'layers' => array('mow_irrigation', 'mow_boreholes', 'oxfam_sand_dams', 'oxfam_boreholes', 'oxfam_lakes', 'oxfam_rivers', 'oxfam_rock_catchments', 'oxfam_springs', 'oxfam_wells', 'oxfam_earthpan')
                 ),
                 'aid_development' => array(
-                    'title' => __('AID - Development'),
+                    'title' => __('AID - Development', 'landquest'),
                     'icon' => $base_url . '/img/icons/2.png',
                     'layers' => array('spanish_programmes')
                 ),
                 'aid_private_sector' => array(
-                    'title' => __('Private Sector'),
+                    'title' => __('Private Sector', 'landquest'),
                     'icon' => $base_url . '/img/icons/1.png',
                     'layers' => array('flowers')
                 )
