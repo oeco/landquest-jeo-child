@@ -1,15 +1,11 @@
 <footer id="colophon">
 	<div class="container">
 		<div class="row">
-			<div class="four columns">
-				<h3><?php _e('Like us on Facebook', 'landquest'); ?></h3>
-				<div class="fb-like-box" data-href="https://www.facebook.com/siteoeco" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-			</div>
-			<div class="four columns">
+			<div class="six columns">
 				<h3><?php _e('Contact us', 'landquest'); ?></h3>
 				<?php echo do_shortcode('[landquest-contact]'); ?>
 			</div>
-			<div class="four columns">
+			<div class="six columns">
 				<?php
 				$creators = array();
 				$partners = get_posts(array('post_type' => 'partner', 'posts_per_page' => -1, 'order' => 'ASC', 'orderby' => 'menu_order'));

@@ -14,9 +14,14 @@
 							<?php endif; ?>
 							<header class="post-header">
 								<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-								<p class="meta">
-									<span class="date"><?php echo get_the_date(); ?></span>
-								</p>
+								<?php
+								$author = landquest_get_author();
+								if($author) :
+									?>
+									<p class="meta">
+										<span class="author"><?php echo get_the_title($author->ID); ?></span>
+									</p>
+								<?php endif; ?>
 							</header>
 							<section class="post-content">
 								<div class="post-excerpt">
