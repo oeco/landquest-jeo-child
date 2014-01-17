@@ -32,9 +32,14 @@ if(have_posts()) :
 									<header>
 										<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 										<div class="post-meta">
-											<p class="post-date">
-												<span><?php echo get_the_date(); ?></span>
-											</p>
+											<?php
+											$author = landquest_get_author();
+											if($author) :
+												?>
+												<p class="post-author">
+													<span><?php echo get_the_title($author->ID); ?></span>
+												</p>
+											<?php endif; ?>
 										</div>
 									</header>
 									<section>
