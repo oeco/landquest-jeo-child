@@ -42,9 +42,12 @@ function lockMarkerPopup(map, marker) {
 	/*
 	 * Slider
 	 */
-	$(document).ready(function() {
+	jeo.markersReady(function(map) {
 		
 		var container = $('#lq-slider');
+		var items = container.find('.slider-content > ul > li');
+
+		var sly;
 		
 		var origNav = [];
 		
@@ -57,7 +60,7 @@ function lockMarkerPopup(map, marker) {
 			var options = {
 				horizontal: 1,
 				itemNav: 'basic',
-				itemSelector: container.find('.slider-content > ul > li'),
+				itemSelector: items,
 				smart: 1,
 				activateOn: 'click',
 				mouseDragging: 0,
@@ -76,7 +79,7 @@ function lockMarkerPopup(map, marker) {
 				next: container.find('.slider-arrows .next')
 			};
 			
-			var sly = new Sly(container.find('.slider-content'), options);
+			sly = new Sly(container.find('.slider-content'), options);
 			
 			var fixSizes = function() {
 				container.find('.slider-content > ul > li').width(container.find('.slider-content').width());
@@ -86,6 +89,19 @@ function lockMarkerPopup(map, marker) {
 			$(window).resize(fixSizes).resize();
 			
 			sly.init();
+
+			container.find('.slider-navigation li').on('click', function() {
+				setTimeout(function() {
+					var index = sly.rel.activePage;
+					var postID = $(items.get(index)).attr('data-postid');
+					//console.log(map._markers[0]);
+					var marker = _.find(map._markers, function(m) { return m.feature.properties.postID == postID; });
+					var scrollTop = map.$.offset().top;
+					$('html,body').animate({scrollTop: scrollTop}, '200', 'swing', function() {
+						map.setView(marker.getLatLng(), 10);
+					});
+				}, 300);
+			});
 
 		}
 

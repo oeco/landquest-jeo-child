@@ -27,7 +27,7 @@ if(have_posts()) :
 				<div class="slider-content">
 					<ul>
 						<?php while(have_posts()) : the_post(); ?>
-							<li>
+							<li data-postid="<?php the_ID(); ?>">
 								<article>
 									<header>
 										<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
