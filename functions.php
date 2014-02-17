@@ -68,6 +68,12 @@ function landquest_contact_email() {
 add_filter('landquest_contact_email', 'landquest_contact_email');
 
 /*
+ * qTranslate
+ */
+
+require_once(STYLESHEETPATH . '/inc/qtranslate/qtranslate.php');
+
+/*
  * About map
  */
 
