@@ -63,7 +63,7 @@ include_once(STYLESHEETPATH . '/inc/gdocs-to-map/gdocs-to-map.php');
 include_once(STYLESHEETPATH . '/inc/jeo-post-zoom.php');
 
 function landquest_contact_email() {
-	return 'miguel@cardume.art.br';
+	return 'evaconstantaras@gmail.com';
 }
 add_filter('landquest_contact_email', 'landquest_contact_email');
 
